@@ -81,7 +81,7 @@
                 <span class="hidden sm:inline">검색 홈으로</span>
             </button>
             <button onclick="openSettings()" class="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors" title="설정">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 0-2.83 2 2 0 0 1 0-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
             </button>
         </div>
     </header>
@@ -121,7 +121,7 @@
                 <div>
                     <label class="block text-xs font-bold text-gray-500 mb-1.5">알림 시점</label>
                     <select id="alarm-threshold-select" class="w-full border border-gray-300 rounded-xl p-3 text-sm font-bold text-gray-800 bg-gray-50 outline-none">
-                        <option value="1">1정거장 전</option><option value="2">2정거장 전</option><option value="3" selected>3정거장 전</option><option value="5">5정거장 전</option>
+                        <option value="0">지금 여기 (도착/통과 시)</option><option value="1">1정거장 전</option><option value="2">2정거장 전</option><option value="3" selected>3정거장 전</option><option value="5">5정거장 전</option>
                     </select>
                 </div>
             </div>
@@ -146,7 +146,7 @@
     <div id="settings-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-[5000] flex items-center justify-center backdrop-blur-sm transition-all">
         <div class="bg-white rounded-2xl shadow-2xl p-6 w-11/12 max-w-sm">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-600"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 0-2.83 2 2 0 0 1 0-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> 화면 설정</h3>
+                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-600"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> 화면 설정</h3>
                 <button onclick="closeSettings()" class="text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 p-1.5 rounded-full"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
             </div>
             <div class="space-y-5 mb-6">
@@ -186,50 +186,61 @@
     </div>
 
     <!-- 1. 검색 홈 화면 -->
-    <div id="view-home" class="flex-grow overflow-y-auto bg-gray-50 flex flex-col items-center pt-10 px-4">
+    <div id="view-home" class="flex-grow overflow-y-auto bg-gray-50 flex flex-col items-center pt-6 sm:pt-10 px-4 pb-10">
         <div class="w-full max-w-4xl bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
-            <div class="flex border-b border-gray-200 bg-gray-50">
-                <button onclick="switchTab('bus')" id="tab-bus" class="flex-1 py-4 text-center tab-active transition-colors">버스 노선 검색</button>
-                <button onclick="switchTab('stop')" id="tab-stop" class="flex-1 py-4 text-center tab-inactive transition-colors">정류장 검색</button>
+            
+            <!-- 통합 검색 지역 설정 (버스 & 정류장 공통) -->
+            <div class="bg-blue-50 px-5 py-4 border-b border-blue-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div class="font-bold text-blue-800 flex items-center gap-1.5 shrink-0">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    검색 대상 지역
+                </div>
+                <div class="flex w-full sm:w-auto gap-2">
+                    <select id="region-prov" class="flex-1 sm:w-40 border border-blue-200 rounded-lg px-3 py-2 bg-white text-sm font-semibold focus:ring-2 focus:ring-blue-500 outline-none text-gray-700 shadow-sm" onchange="onChangeProv()"><option value="">도/광역시</option></select>
+                    <select id="region-city" class="flex-1 sm:w-40 border border-blue-200 rounded-lg px-3 py-2 bg-white text-sm font-semibold focus:ring-2 focus:ring-blue-500 outline-none disabled:bg-blue-50 text-gray-700 shadow-sm" onchange="onChangeCity()" disabled><option value="">시/군/구</option></select>
+                </div>
+            </div>
+
+            <div class="flex border-b border-gray-200 bg-white">
+                <button onclick="switchTab('bus')" id="tab-bus" class="flex-1 py-4 text-center tab-active transition-colors">버스 노선 조회</button>
+                <button onclick="switchTab('stop')" id="tab-stop" class="flex-1 py-4 text-center tab-inactive transition-colors">정류장 조회</button>
             </div>
 
             <div class="p-6 sm:p-8 min-h-[300px]">
+                <!-- 버스 노선 검색 -->
                 <div id="panel-bus" class="flex flex-col gap-6">
                     <div>
-                        <h2 class="text-lg font-bold text-gray-800 mb-2 flex items-center">
-                            실시간 버스 노선 조회 <span id="bus-panel-city-label" class="text-sm text-blue-600 ml-2 bg-blue-50 px-2 py-0.5 rounded border border-blue-100"></span>
-                        </h2>
+                        <h2 class="text-lg font-bold text-gray-800 mb-1">실시간 버스 노선 조회</h2>
                         <p class="text-sm text-gray-500">원하시는 버스의 분류와 번호를 선택하시면 실시간 위치가 표시됩니다.</p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-3">
                         <div class="flex-1">
-                            <label class="block text-xs font-semibold text-gray-600 mb-1">노선 분류</label>
-                            <select id="route-type-select" class="w-full border border-gray-300 rounded-lg p-2.5 bg-white focus:ring-2 focus:ring-blue-500" onchange="updateRouteNoList()">
+                            <label class="block text-xs font-semibold text-gray-600 mb-1.5">노선 분류</label>
+                            <select id="route-type-select" class="w-full border border-gray-300 rounded-lg p-3 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-blue-500 transition-colors font-medium outline-none" onchange="updateRouteNoList()">
                                 <option value="all">전체 노선</option><option value="loading" disabled>데이터를 불러오는 중...</option>
                             </select>
                         </div>
                         <div class="flex-[2]">
-                            <label class="block text-xs font-semibold text-gray-600 mb-1">버스 번호 선택</label>
-                            <select id="route-no-select" class="w-full border border-gray-300 rounded-lg p-2.5 bg-white text-blue-700 font-bold focus:ring-2 focus:ring-blue-500" onchange="onSelectBus()">
+                            <label class="block text-xs font-semibold text-gray-600 mb-1.5">버스 번호 선택</label>
+                            <select id="route-no-select" class="w-full border border-gray-300 rounded-lg p-3 bg-gray-50 focus:bg-white text-blue-700 font-bold focus:ring-2 focus:ring-blue-500 transition-colors outline-none" onchange="onSelectBus()">
                                 <option value="">분류를 먼저 선택해주세요</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
+                <!-- 정류장 검색 -->
                 <div id="panel-stop" class="hidden flex flex-col gap-6">
                     <div>
-                        <h2 class="text-lg font-bold text-gray-800 mb-2">정류장 검색 (지역별)</h2>
-                        <p class="text-sm text-gray-500">지역을 선택하거나 정류장 이름을 직접 입력하세요.</p>
+                        <h2 class="text-lg font-bold text-gray-800 mb-1">상세 정류장 검색</h2>
+                        <p class="text-sm text-gray-500">동/읍/면 단위로 좁히거나 정류장 이름을 직접 입력하세요.</p>
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-2 bg-gray-50 p-3 rounded-lg border border-gray-100">
-                        <select id="region-prov" class="flex-1 border border-gray-300 rounded-lg px-2 py-2.5 bg-white" onchange="onChangeProv()"><option value="">도/광역시</option></select>
-                        <select id="region-city" class="flex-1 border border-gray-300 rounded-lg px-2 py-2.5 bg-white disabled:bg-gray-50" onchange="onChangeCity()" disabled><option value="">시/군/구</option></select>
-                        <select id="region-gu" class="flex-1 border border-gray-300 rounded-lg px-2 py-2.5 hidden bg-white disabled:bg-gray-50" onchange="onChangeGu()"><option value="">구 선택</option></select>
-                        <select id="region-dong" class="flex-[1.5] border border-gray-300 rounded-lg px-2 py-2.5 bg-white disabled:bg-gray-50" disabled><option value="">동/읍/면 선택 (선택 지역만)</option></select>
+                    <div class="flex gap-2">
+                        <select id="region-gu" class="w-1/3 border border-gray-300 rounded-lg px-3 py-2.5 hidden bg-white disabled:bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium" onchange="onChangeGu()"><option value="">구 선택</option></select>
+                        <select id="region-dong" class="flex-1 border border-gray-300 rounded-lg px-3 py-2.5 bg-white disabled:bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium" disabled><option value="">동/읍/면 선택</option></select>
                     </div>
-                    <div class="flex gap-2 relative">
-                        <input type="text" id="stop-name-search" class="flex-1 border border-gray-300 rounded-lg px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 shadow-sm" placeholder="정류장명 직접 입력 (예: 롯데마트)" onkeydown="if(event.key === 'Enter') onSearchStopClick()">
+                    <div class="flex gap-2 relative mt-2">
+                        <input type="text" id="stop-name-search" class="flex-1 border border-gray-300 rounded-lg px-4 py-3 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-blue-500 shadow-sm font-medium transition-colors outline-none" placeholder="정류장명 직접 입력 (예: 롯데마트)" onkeydown="if(event.key === 'Enter') onSearchStopClick()">
                         <button id="btn-search-stop" onclick="onSearchStopClick()" class="flex-none px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold shadow-md transition-colors whitespace-nowrap">검색</button>
                     </div>
                 </div>
@@ -237,32 +248,55 @@
         </div>
     </div>
 
-    <!-- 2. 지도 방식 화면 -->
-    <div id="view-map" class="hidden flex-grow relative w-full h-[calc(100vh-64px)]">
-        <div id="map"></div>
-        <div id="stop-routes-overlay" class="hidden absolute top-4 left-1/2 transform -translate-x-1/2 bg-white rounded-xl shadow-lg border border-gray-200 z-[1000] flex-col w-11/12 max-w-sm max-h-[65vh]">
-            <div class="px-4 py-3 bg-gray-50 border-b border-gray-200 flex flex-col shrink-0">
-                <div class="flex justify-between items-center w-full">
-                    <div class="flex flex-col"><span class="text-xs text-gray-500">선택된 정류장</span><span class="font-bold text-gray-800 text-base" id="overlay-stop-name">정류장명</span></div>
-                    <button onclick="document.getElementById('stop-routes-overlay').classList.add('hidden')" class="p-1 text-gray-400 hover:bg-gray-200 rounded-full"><svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
-                </div>
-                <div class="flex justify-end w-full mt-2">
-                    <select id="stop-search-sort" onchange="renderStopSearchArrivals(this.value)" class="text-[11px] border border-gray-300 rounded p-1 text-gray-600 bg-white outline-none"><option value="time">도착시간 순</option><option value="name">노선번호 순</option></select>
-                </div>
-            </div>
-            <div id="stop-route-list" class="flex-1 flex flex-col overflow-y-auto p-2 gap-2 bg-white custom-scrollbar"></div>
-        </div>
+    <!-- 2. 지도 방식 화면 (왼쪽 단일 사이드바 레이아웃 - 확장된 크기) -->
+    <div id="view-map" class="hidden flex-grow w-full h-[calc(100vh-64px)] flex flex-row overflow-hidden bg-gray-100 relative">
         
-        <!-- 누락되었던 정류장 선택 드롭다운 오버레이 복구 -->
-        <div id="stop-selection-overlay" class="hidden absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white rounded-xl shadow-2xl border border-gray-200 z-[1000] w-11/12 max-w-md p-4 flex flex-col gap-3">
-            <div class="flex justify-between items-center">
-                <span class="font-bold text-gray-800" id="dong-overlay-title">정류장 목록</span>
-                <button onclick="closeDongStopsOverlay()" class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded hover:bg-gray-200 transition-colors">닫기</button>
+        <!-- 왼쪽 사이드바 (통합형 및 크기 확장) -->
+        <div id="map-sidebar" class="hidden flex-col bg-white shadow-[4px_0_24px_rgba(0,0,0,0.1)] z-[2000] w-[420px] max-w-[95vw] shrink-0 h-full absolute md:relative left-0 top-0 border-r border-gray-200 transition-transform">
+            
+            <!-- 뷰 1: 검색된 정류장 목록 -->
+            <div id="sidebar-view-list" class="flex-1 flex flex-col overflow-hidden h-full">
+                <div class="px-4 py-3 bg-blue-600 text-white flex justify-between items-center shrink-0 shadow-sm z-20">
+                    <span class="font-bold text-sm" id="sidebar-title">검색된 정류장 목록</span>
+                    <button onclick="closeMapSidebar()" class="p-1.5 hover:bg-blue-700 rounded-full transition-colors">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div id="sidebar-stop-list" class="flex-1 overflow-y-auto bg-gray-50 custom-scrollbar p-2 space-y-1 relative z-10">
+                    <!-- Javascript injects buttons here -->
+                </div>
             </div>
-            <select id="dong-stops-dropdown" class="w-full border border-gray-300 rounded-lg p-2.5 font-medium text-gray-700 outline-none" onchange="onDropdownStopSelect()">
-                <option value="">정류장을 선택하세요</option>
-            </select>
-            <button id="btn-confirm-stop" onclick="confirmStopSelection()" class="hidden w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-lg shadow-md text-sm transition-colors">이 정류장 노선 보기</button>
+
+            <!-- 뷰 2: 정류장 상세 (도착 정보 - 1줄 전광판형 UI 적용) -->
+            <div id="sidebar-view-detail" class="hidden flex-1 flex flex-col overflow-hidden h-full bg-gray-50">
+                <div class="px-3 py-3 bg-gray-800 text-white flex justify-between items-center shrink-0 shadow-sm z-20">
+                    <button onclick="showSidebarList()" class="text-xs font-bold text-gray-300 hover:text-white flex items-center gap-1 bg-gray-700 hover:bg-gray-600 px-2 py-1.5 rounded transition-colors">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg> 목록으로
+                    </button>
+                    <button onclick="closeMapSidebar()" class="p-1.5 hover:bg-gray-700 rounded-full transition-colors text-gray-300">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div class="px-3 py-2.5 bg-white border-b border-gray-200 flex justify-between items-center shrink-0">
+                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                        <span class="text-[10px] text-gray-500 font-bold mb-0.5">선택된 정류장 도착 정보</span>
+                        <span class="font-black text-gray-800 text-sm truncate" id="sidebar-detail-title">정류장명</span>
+                    </div>
+                    <select id="stop-search-sort" onchange="renderStopSearchArrivals(this.value)" class="text-[10px] border border-gray-300 rounded p-1 text-gray-700 bg-gray-50 outline-none cursor-pointer shrink-0">
+                        <option value="time">시간순</option>
+                        <option value="name">번호순</option>
+                    </select>
+                </div>
+                <div id="stop-route-list" class="flex-1 overflow-y-auto p-3 bg-gray-50 custom-scrollbar flex flex-col">
+                    <!-- Arrival Info Injected Here -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 지도 영역 -->
+        <div class="flex-1 relative h-full z-10 flex flex-col">
+            <div id="map" class="flex-1 w-full h-full"></div>
         </div>
     </div>
 
@@ -279,8 +313,9 @@
         </div>
     </div>
 
-    <!-- Leaflet JS -->
+    <!-- Leaflet JS & Polyline Offset Plugin -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-polylineoffset@1.1.1/leaflet.polylineoffset.min.js"></script>
     
     <script>
         // 전역 상태 변수들
@@ -304,6 +339,7 @@
         let currentRouteStops = [], currentBusLocations = []; 
         let currentTurnaroundIndex = -1;
         let highlightStopMarker = null, previewStopMarker = null, updateIntervalId = null; 
+        let missingBusTolerance = 0; // API 통신 불안정 대비 허용치
 
         // 사용자 상호작용 상태 관리
         let myBusId = null;
@@ -312,15 +348,17 @@
         let selectionState = 'none'; 
         let activeAlarm = null, alarmIntervalId = null;
         let currentArrivalData = [], currentArrivalSort = 'time'; 
+        let currentStopNameForArrival = ''; // UI 표기용 현재 정류장명 저장
 
         // 색상 및 지역 데이터 세트
         const colorSets = {
-            blue: { fwBg: 'bg-blue-500', bwBg: 'bg-blue-400', fwBorder: 'border-blue-500', bwBorder: 'border-blue-400', fwText: 'text-blue-500', bwText: 'text-blue-400', fwHex: '#3b82f6', bwHex: '#60a5fa', fwPulse: 'pulse-active', bwPulse: 'pulse-active' },
-            green: { fwBg: 'bg-green-500', bwBg: 'bg-green-400', fwBorder: 'border-green-500', bwBorder: 'border-green-400', fwText: 'text-green-500', bwText: 'text-green-400', fwHex: '#10b981', bwHex: '#34d399', fwPulse: 'pulse-green-active', bwPulse: 'pulse-green-active' },
-            red: { fwBg: 'bg-red-500', bwBg: 'bg-red-400', fwBorder: 'border-red-500', bwBorder: 'border-red-400', fwText: 'text-red-500', bwText: 'text-red-400', fwHex: '#ef4444', bwHex: '#f87171', fwPulse: 'pulse-red-active', bwPulse: 'pulse-red-active' }
+            blue: { fwBg: 'bg-blue-600', bwBg: 'bg-red-500', fwBorder: 'border-blue-600', bwBorder: 'border-red-500', fwText: 'text-blue-600', bwText: 'text-red-500', fwHex: '#2563eb', bwHex: '#ef4444', fwPulse: 'pulse-active', bwPulse: 'pulse-red-active' },
+            green: { fwBg: 'bg-green-600', bwBg: 'bg-orange-500', fwBorder: 'border-green-600', bwBorder: 'border-orange-500', fwText: 'text-green-600', bwText: 'text-orange-500', fwHex: '#16a34a', bwHex: '#f97316', fwPulse: 'pulse-green-active', bwPulse: 'pulse-orange-active' },
+            red: { fwBg: 'bg-red-600', bwBg: 'bg-blue-500', fwBorder: 'border-red-600', bwBorder: 'border-blue-500', fwText: 'text-red-600', bwText: 'text-blue-500', fwHex: '#dc2626', bwHex: '#3b82f6', fwPulse: 'pulse-red-active', bwPulse: 'pulse-active' }
         };
         let cityCodeMap = {}, provCityMap = {}, sidoCache = null, allCityStopsCache = {};
-        
+        let stopFetchPromise = {}; // 다중 요청 방지 및 로컬 스토리지 동기화용
+        let isPrefetching = false; // 동시 다발적인 캐시 데이터 요청 방지용
         const dongCoordinates = { "동읍": [35.311, 128.670], "북면": [35.336, 128.583], "대산면": [35.328, 128.756], "의창동": [35.258, 128.615], "팔룡동": [35.247, 128.601], "명곡동": [35.246, 128.641], "봉림동": [35.242, 128.665], "반송동": [35.235, 128.668], "중앙동": [35.225, 128.675], "상남동": [35.221, 128.685], "사파동": [35.228, 128.701], "가음정동": [35.210, 128.694], "성주동": [35.195, 128.711], "웅남동": [35.201, 128.650], "구산면": [35.105, 128.577], "진동면": [35.115, 128.483], "진북면": [35.132, 128.455], "진전면": [35.107, 128.388], "현동": [35.158, 128.538], "가포동": [35.168, 128.568], "월영동": [35.176, 128.558], "문화동": [35.187, 128.563], "반월중앙동": [35.191, 128.566], "완월동": [35.193, 128.558], "자산동": [35.200, 128.563], "오동동": [35.203, 128.575], "교방동": [35.209, 128.563], "합포동": [35.216, 128.573], "산호동": [35.215, 128.580], "내서읍": [35.241, 128.513], "회원1동": [35.217, 128.568], "회원2동": [35.222, 128.564], "석전동": [35.231, 128.575], "회성동": [35.237, 128.568], "양덕1동": [35.228, 128.583], "양덕2동": [35.223, 128.588], "합성1동": [35.241, 128.580], "합성2동": [35.235, 128.585], "구암1동": [35.245, 128.591], "구암2동": [35.241, 128.597], "봉암동": [35.214, 128.601], "충무동": [35.150, 128.653], "여좌동": [35.157, 128.658], "태백동": [35.153, 128.670], "경화동": [35.150, 128.681], "병암동": [35.150, 128.691], "석동": [35.153, 128.700], "이동": [35.148, 128.706], "자은동": [35.155, 128.718], "덕산동": [35.144, 128.715], "풍호동": [35.138, 128.723], "웅천동": [35.105, 128.751], "웅동1동": [35.111, 128.798], "웅동2동": [35.093, 128.818] };
 
         // --- 초기화 로직 ---
@@ -335,10 +373,13 @@
             return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         }
 
-        // --- 공통 fetch 유틸 (JSON 파싱 에러 방지) ---
+        // --- 공통 fetch 유틸 (JSON 파싱 에러 방지 및 캐시 무효화) ---
         async function safeFetchJson(url) {
             try {
-                const response = await fetch(url);
+                const separator = url.includes('?') ? '&' : '?';
+                const fetchUrl = url + separator + '_ts=' + new Date().getTime();
+                
+                const response = await fetch(fetchUrl, { cache: 'no-store' });
                 const text = await response.text();
                 return JSON.parse(text);
             } catch (e) {
@@ -376,25 +417,86 @@
         function cancelSelection() { selectionState = 'none'; if (targetDepIndex !== -1 && targetArrIndex === -1) targetDepIndex = -1; if (targetArrIndex !== -1 && targetDepIndex === -1) targetArrIndex = -1; hideSelectionBanner(); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); applyBusLocationsToUI(currentBusLocations); renderMapMarkers(); }
 
         // --- 설정 관련 ---
-        function openSettings() { tempViewMode = viewMode; updateSettingsUI(); document.getElementById('settings-modal').classList.remove('hidden'); }
+        function openSettings() { 
+            tempViewMode = viewMode; 
+            updateSettingsButtonsUI(); 
+            
+            const sProv = document.getElementById('setting-prov'); 
+            const sCity = document.getElementById('setting-city');
+            
+            // 최초 1회 도/광역시 옵션 채우기
+            if (sProv.options.length === 0 && Object.keys(provCityMap).length > 0) { 
+                Object.keys(provCityMap).sort().forEach(p => { 
+                    const opt = document.createElement('option'); opt.value = p; opt.textContent = p; sProv.appendChild(opt); 
+                }); 
+            }
+            
+            // 모달을 열 때마다 기존 저장된 지역 설정으로 안전하게 초기화
+            sProv.value = defaultProv; 
+            onSettingProvChange(); 
+            sCity.value = defaultCity; 
+
+            document.getElementById('settings-modal').classList.remove('hidden'); 
+        }
+
         function closeSettings() { document.getElementById('settings-modal').classList.add('hidden'); }
+
         function saveAndCloseSettings() {
-            defaultProv = document.getElementById('setting-prov').value; defaultCity = document.getElementById('setting-city').value; viewMode = tempViewMode;
+            const newProv = document.getElementById('setting-prov').value;
+            const newCity = document.getElementById('setting-city').value;
+            
+            if(!newProv || !newCity) { showToast("지역을 올바르게 선택해주세요."); return; }
+
+            defaultProv = newProv; defaultCity = newCity; viewMode = tempViewMode;
             localStorage.setItem('defaultProv', defaultProv); localStorage.setItem('defaultCity', defaultCity); localStorage.setItem('busViewMode', viewMode);
-            if (cityCodeMap[defaultCity]) { API_CONFIG.cityCode = cityCodeMap[defaultCity]; document.getElementById('region-prov').value = defaultProv; onChangeProv(); document.getElementById('region-city').value = defaultCity; document.getElementById('bus-panel-city-label').textContent = `(${defaultCity})`; }
-            if (currentRouteId && currentRouteStops.length > 0) { if (viewMode === 'map') { document.getElementById('view-map').classList.remove('hidden'); document.getElementById('view-diagram').classList.add('hidden'); setTimeout(() => { map.invalidateSize(); }, 100); } else { document.getElementById('view-map').classList.add('hidden'); document.getElementById('view-diagram').classList.remove('hidden'); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); } applyBusLocationsToUI(currentBusLocations); }
+            
+            if (cityCodeMap[defaultCity]) { 
+                API_CONFIG.cityCode = cityCodeMap[defaultCity]; 
+                document.getElementById('region-prov').value = defaultProv; 
+                onChangeProv(); 
+                document.getElementById('region-city').value = defaultCity; 
+                onChangeCity(); 
+            }
+            
+            if (currentRouteId && currentRouteStops.length > 0) { 
+                if (viewMode === 'map') { 
+                    document.getElementById('view-map').classList.remove('hidden'); document.getElementById('view-diagram').classList.add('hidden'); setTimeout(() => { map.invalidateSize(); }, 150); 
+                } else { 
+                    document.getElementById('view-map').classList.add('hidden'); document.getElementById('view-diagram').classList.remove('hidden'); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); 
+                } 
+                applyBusLocationsToUI(currentBusLocations); 
+            }
             closeSettings(); showToast("설정이 저장되었습니다.");
         }
-        function updateSettingsUI() {
+
+        // 방식 변경 버튼 UI만 독립적으로 업데이트하는 함수 (드롭다운과 로직 분리)
+        function updateSettingsButtonsUI() {
             const btnMap = document.getElementById('btn-view-map'); const btnDiagram = document.getElementById('btn-view-diagram');
-            const activeClass = "flex-1 py-4 border-2 rounded-xl text-sm font-bold flex flex-col items-center gap-2 transition-colors border-blue-500 bg-blue-50 text-blue-700"; const inactiveClass = "flex-1 py-4 border border-gray-300 rounded-xl text-sm font-medium flex flex-col items-center gap-2 text-gray-500 hover:bg-gray-50 transition-colors";
-            btnMap.className = tempViewMode === 'map' ? activeClass : inactiveClass; btnDiagram.className = tempViewMode === 'diagram' ? activeClass : inactiveClass;
-            const sProv = document.getElementById('setting-prov'); const sCity = document.getElementById('setting-city');
-            if (sProv.options.length === 0) { Object.keys(provCityMap).sort().forEach(p => { const opt = document.createElement('option'); opt.value = p; opt.textContent = p; sProv.appendChild(opt); }); }
-            if (!document.getElementById('settings-modal').classList.contains('hidden')) { sProv.value = document.getElementById('setting-prov').value || defaultProv; onSettingProvChange(); sCity.value = document.getElementById('setting-city').value || defaultCity; } else { sProv.value = defaultProv; onSettingProvChange(); sCity.value = defaultCity; }
+            const activeClass = "flex-1 py-4 border-2 rounded-xl text-sm font-bold flex flex-col items-center gap-2 transition-colors border-blue-500 bg-blue-50 text-blue-700"; 
+            const inactiveClass = "flex-1 py-4 border border-gray-300 rounded-xl text-sm font-medium flex flex-col items-center gap-2 text-gray-500 hover:bg-gray-50 transition-colors";
+            
+            btnMap.className = tempViewMode === 'map' ? activeClass : inactiveClass; 
+            btnDiagram.className = tempViewMode === 'diagram' ? activeClass : inactiveClass;
         }
-        function onSettingProvChange() { const sProv = document.getElementById('setting-prov').value; const sCity = document.getElementById('setting-city'); sCity.innerHTML = ''; if (sProv && provCityMap[sProv]) { sCity.disabled = false; provCityMap[sProv].sort().forEach(c => { const opt = document.createElement('option'); opt.value = c; opt.textContent = c; sCity.appendChild(opt); }); } else sCity.disabled = true; }
-        function setTempViewMode(mode) { tempViewMode = mode; updateSettingsUI(); }
+
+        function onSettingProvChange() { 
+            const sProv = document.getElementById('setting-prov').value; 
+            const sCity = document.getElementById('setting-city'); 
+            sCity.innerHTML = ''; 
+            if (sProv && provCityMap[sProv]) { 
+                sCity.disabled = false; 
+                provCityMap[sProv].sort().forEach(c => { 
+                    const opt = document.createElement('option'); opt.value = c; opt.textContent = c; sCity.appendChild(opt); 
+                }); 
+            } else {
+                sCity.disabled = true; 
+            }
+        }
+        
+        function setTempViewMode(mode) { 
+            tempViewMode = mode; 
+            updateSettingsButtonsUI(); // 드롭다운을 건드리지 않고 버튼 모양만 변경
+        }
 
         // --- 지역 및 도시 코드 API 로직 ---
         async function initCityCodes() {
@@ -412,44 +514,95 @@
                 if (provCityMap[defaultProv] && cityCodeMap[defaultCity]) { provSelect.value = defaultProv; API_CONFIG.cityCode = cityCodeMap[defaultCity]; } 
                 else { provSelect.value = "경상남도"; defaultCity = "창원시"; API_CONFIG.cityCode = "38010"; }
                 
-                onChangeProv(); document.getElementById('region-city').value = defaultCity; onChangeCity(); document.getElementById('bus-panel-city-label').textContent = `(${defaultCity})`;
+                onChangeProv(); document.getElementById('region-city').value = defaultCity; onChangeCity();
             }
         }
 
+        // --- 지역 및 법정동 캐싱 시스템 구축 ---
+        const SIDO_CODES = { "서울특별시": "11", "부산광역시": "26", "대구광역시": "27", "인천광역시": "28", "광주광역시": "29", "대전광역시": "30", "울산광역시": "31", "세종특별자치시": "36", "경기도": "41", "강원특별자치도": "51", "충청북도": "43", "충청남도": "44", "전북특별자치도": "52", "전라남도": "46", "경상북도": "47", "경상남도": "48", "제주특별자치도": "50" };
+
+        const CHANGWON_GU_DONG = {
+            "의창구": ["동읍", "북면", "대산면", "의창동", "팔룡동", "명곡동", "봉림동"],
+            "성산구": ["반송동", "중앙동", "상남동", "사파동", "가음정동", "성주동", "웅남동"],
+            "마산합포구": ["구산면", "진동면", "진북면", "진전면", "현동", "가포동", "월영동", "문화동", "반월중앙동", "완월동", "자산동", "오동동", "교방동", "합포동", "산호동"],
+            "마산회원구": ["내서읍", "회원1동", "회원2동", "석전동", "회성동", "양덕1동", "양덕2동", "합성1동", "합성2동", "구암1동", "구암2동", "봉암동"],
+            "진해구": ["충무동", "여좌동", "태백동", "경화동", "병암동", "석동", "이동", "자은동", "덕산동", "풍호동", "웅천동", "웅동1동", "웅동2동"]
+        };
+
+        async function fetchRegcodesWithCache(pattern) {
+            const cacheKey = 'regcode_cache_v2';
+            let regCache = null;
+            try {
+                const cachedStr = localStorage.getItem(cacheKey);
+                if (cachedStr) {
+                    regCache = JSON.parse(cachedStr);
+                    if (Date.now() - regCache.timestamp > 30 * 24 * 60 * 60 * 1000) regCache = null; 
+                }
+            } catch(e) { localStorage.removeItem(cacheKey); }
+
+            if (!regCache) regCache = { timestamp: Date.now(), data: {} };
+            if (regCache.data[pattern]) return regCache.data[pattern];
+
+            try {
+                const response = await fetch(`https://grpc-proxy-server-mkvo6j4wsq-du.a.run.app/v1/regcodes?regcode_pattern=${pattern}&is_ignore_zero=true`);
+                if (!response.ok) throw new Error("Network response was not ok");
+                const data = await response.json();
+                if (data && data.regcodes) {
+                    regCache.data[pattern] = data;
+                    localStorage.setItem(cacheKey, JSON.stringify(regCache));
+                    return data;
+                }
+            } catch (e) { console.warn("지역 코드 캐싱 실패", e); }
+            return null;
+        }
+
         async function getSidoCode(provName) {
-            if (!sidoCache) { try { const data = await safeFetchJson('https://grpc-proxy-server-mkvo6j4wsq-du.a.run.app/v1/regcodes?regcode_pattern=*00000000'); sidoCache = data?.regcodes; } catch(e) { return null; } }
-            return sidoCache?.find(s => s.name === provName)?.code.substring(0, 2) || null;
+            if (SIDO_CODES[provName]) return SIDO_CODES[provName]; 
+            const data = await fetchRegcodesWithCache('*00000000');
+            return data?.regcodes?.find(s => s.name === provName)?.code.substring(0, 2) || null;
         }
 
         async function fetchGuAndDong(provName, cityName) {
-            const sidoPrefix = await getSidoCode(provName); const guSelect = document.getElementById('region-gu'); const dongSelect = document.getElementById('region-dong'); 
-            if (!sidoPrefix) { guSelect.classList.add('hidden'); dongSelect.classList.add('hidden'); return; }
+            const guSelect = document.getElementById('region-gu'); const dongSelect = document.getElementById('region-dong'); 
+            dongSelect.classList.remove('hidden'); dongSelect.innerHTML = '<option value="">로딩 중...</option>'; dongSelect.disabled = true;
+
+            if (cityName === '창원시') {
+                guSelect.classList.remove('hidden'); guSelect.innerHTML = '<option value="">구 선택</option>';
+                Object.keys(CHANGWON_GU_DONG).sort((a, b) => a.localeCompare(b)).forEach(gu => { const opt = document.createElement('option'); opt.value = gu; opt.textContent = gu; guSelect.appendChild(opt); });
+                dongSelect.innerHTML = '<option value="">구를 먼저 선택해주세요</option>'; dongSelect.disabled = true;
+                return;
+            }
+
+            const sidoPrefix = await getSidoCode(provName); 
+            if (!sidoPrefix) { guSelect.classList.add('hidden'); dongSelect.innerHTML = '<option value="">지역 로드 실패 (직접검색)</option>'; return; }
             try {
-                const data = await safeFetchJson(`https://grpc-proxy-server-mkvo6j4wsq-du.a.run.app/v1/regcodes?regcode_pattern=${sidoPrefix}*00000&is_ignore_zero=true`);
+                const data = await fetchRegcodesWithCache(`${sidoPrefix}*00000`);
                 if(!data) throw new Error("No data");
                 const cleanCityName = cityName.split(' ')[0]; const matchedCities = data.regcodes.filter(r => r.name.includes(cleanCityName));
                 const gus = []; let exactCityCode = null;
                 matchedCities.forEach(r => { const parts = r.name.split(' '); if (parts.length >= 3 && parts[2].endsWith('구')) gus.push({ code: r.code.substring(0, 5), name: parts[2] }); if (parts.length === 2 || r.name.endsWith(cleanCityName)) exactCityCode = r.code.substring(0, 5); });
-                dongSelect.classList.remove('hidden');
+                
                 if (gus.length > 0) {
-                    guSelect.classList.remove('hidden'); guSelect.innerHTML = '<option value="">구 선택</option>'; gus.forEach(gu => { const opt = document.createElement('option'); opt.value = gu.code; opt.textContent = gu.name; guSelect.appendChild(opt); });
-                    dongSelect.innerHTML = '<option value="">구를 선택해주세요</option>'; dongSelect.disabled = true;
+                    guSelect.classList.remove('hidden'); guSelect.innerHTML = '<option value="">구 선택</option>'; 
+                    gus.sort((a, b) => a.name.localeCompare(b.name)).forEach(gu => { const opt = document.createElement('option'); opt.value = gu.code; opt.textContent = gu.name; guSelect.appendChild(opt); });
+                    dongSelect.innerHTML = '<option value="">구를 먼저 선택해주세요</option>'; dongSelect.disabled = true;
                 } else {
                     guSelect.classList.add('hidden'); guSelect.value = ""; const targetCode = exactCityCode || (matchedCities.length > 0 ? matchedCities[0].code.substring(0, 5) : null);
                     if (targetCode) fetchDongs(targetCode); else dongSelect.innerHTML = '<option value="">동/읍/면 찾기 실패</option>';
                 }
-            } catch(e) { guSelect.classList.add('hidden'); dongSelect.classList.add('hidden'); }
+            } catch(e) { guSelect.classList.add('hidden'); dongSelect.innerHTML = '<option value="">서버 지연 (직접검색 권장)</option>'; }
         }
 
         async function fetchDongs(parentCode) {
-            const dongSelect = document.getElementById('region-dong'); dongSelect.innerHTML = '<option value="">불러오는 중...</option>'; dongSelect.disabled = true;
+            const dongSelect = document.getElementById('region-dong'); dongSelect.innerHTML = '<option value="">동/읍/면 불러오는 중...</option>'; dongSelect.disabled = true; dongSelect.classList.remove('hidden');
             try {
-                const data = await safeFetchJson(`https://grpc-proxy-server-mkvo6j4wsq-du.a.run.app/v1/regcodes?regcode_pattern=${parentCode}*&is_ignore_zero=true`);
+                const data = await fetchRegcodesWithCache(`${parentCode}*`);
                 if(!data) throw new Error("No data");
-                dongSelect.innerHTML = '<option value="">동/읍/면 선택 (선택 지역만)</option>'; const uniqueDongNames = new Set();
-                data.regcodes.forEach(r => { if (!r.code.endsWith('00') || r.code === parentCode + '00000') return; const dongName = r.name.split(' ').pop(); if (dongName && !uniqueDongNames.has(dongName)) { uniqueDongNames.add(dongName); const opt = document.createElement('option'); opt.value = dongName; opt.textContent = dongName; dongSelect.appendChild(opt); } });
+                dongSelect.innerHTML = '<option value="">동/읍/면 선택 (반경 6km 조회)</option>'; const uniqueDongNames = new Set();
+                data.regcodes.forEach(r => { if (!r.code.endsWith('00') || r.code === parentCode + '00000') return; const dongName = r.name.split(' ').pop(); if (dongName) { uniqueDongNames.add(dongName); } });
+                Array.from(uniqueDongNames).sort((a, b) => a.localeCompare(b)).forEach(dongName => { const opt = document.createElement('option'); opt.value = dongName; opt.textContent = dongName; dongSelect.appendChild(opt); });
                 dongSelect.disabled = false;
-            } catch (e) { dongSelect.innerHTML = '<option value="">불러오기 실패</option>'; }
+            } catch (e) { dongSelect.innerHTML = '<option value="">불러오기 실패 (직접검색)</option>'; }
         }
 
         function onChangeProv() {
@@ -457,17 +610,118 @@
             if (prov && provCityMap[prov]) { citySelect.disabled = false; provCityMap[prov].sort().forEach(city => { const opt = document.createElement('option'); opt.value = city; opt.textContent = city; citySelect.appendChild(opt); }); } 
             else citySelect.disabled = true; document.getElementById('region-gu').classList.add('hidden'); document.getElementById('region-dong').classList.add('hidden'); document.getElementById('region-dong').innerHTML = '<option value="">동/읍/면 선택</option>'; 
         }
+
         function onChangeCity() {
             const prov = document.getElementById('region-prov').value; const city = document.getElementById('region-city').value; if (!city) return;
-            API_CONFIG.cityCode = cityCodeMap[city]; document.getElementById('bus-panel-city-label').textContent = `(${city})`; document.getElementById('region-gu').classList.add('hidden'); document.getElementById('region-dong').classList.remove('hidden');
+            API_CONFIG.cityCode = cityCodeMap[city]; document.getElementById('region-gu').classList.add('hidden'); document.getElementById('region-dong').classList.remove('hidden');
             fetchGuAndDong(prov, city); fetchAllRoutes();
+            prefetchCityStops(API_CONFIG.cityCode); 
         }
-        function onChangeGu() { const guCode = document.getElementById('region-gu').value; if (guCode) fetchDongs(guCode); else { document.getElementById('region-dong').innerHTML = '<option value="">구를 선택해주세요</option>'; document.getElementById('region-dong').disabled = true; } }
+
+        function onChangeGu() { 
+            const city = document.getElementById('region-city').value;
+            const guCode = document.getElementById('region-gu').value; 
+            const dongSelect = document.getElementById('region-dong');
+
+            if (city === '창원시' && guCode) {
+                dongSelect.innerHTML = '<option value="">동/읍/면 선택 (반경 6km 조회)</option>';
+                if (CHANGWON_GU_DONG[guCode]) {
+                    [...CHANGWON_GU_DONG[guCode]].sort((a, b) => a.localeCompare(b)).forEach(dong => { const opt = document.createElement('option'); opt.value = dong; opt.textContent = dong; dongSelect.appendChild(opt); });
+                }
+                dongSelect.disabled = false;
+                return;
+            }
+
+            if (guCode) fetchDongs(guCode); 
+            else { document.getElementById('region-dong').innerHTML = '<option value="">구를 선택해주세요</option>'; document.getElementById('region-dong').disabled = true; } 
+        }
+
+        // --- 백그라운드 캐싱 및 스마트 업데이트 로직 ---
+        async function prefetchCityStops(cityCode) {
+            if (allCityStopsCache[cityCode] && allCityStopsCache[cityCode].length > 0) return allCityStopsCache[cityCode];
+            if (isPrefetching) { while(isPrefetching) { await new Promise(r => setTimeout(r, 200)); } return allCityStopsCache[cityCode]; }
+            if (stopFetchPromise[cityCode]) return stopFetchPromise[cityCode];
+
+            isPrefetching = true;
+            stopFetchPromise[cityCode] = (async () => {
+                const cacheKey = `bus_stops_${cityCode}`;
+                let localData = null;
+
+                const cachedStr = localStorage.getItem(cacheKey);
+                if (cachedStr) {
+                    try {
+                        localData = JSON.parse(cachedStr);
+                        allCityStopsCache[cityCode] = localData.data;
+                    } catch(e) { localStorage.removeItem(cacheKey); }
+                }
+
+                try {
+                    const checkData = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${cityCode}&numOfRows=1&pageNo=1&_type=json`);
+                    const currentCount = checkData?.response?.body?.totalCount;
+                    const needsUpdate = !localData || localData.totalCount !== currentCount || (Date.now() - localData.timestamp > 7 * 24 * 60 * 60 * 1000);
+
+                    if (needsUpdate && currentCount) {
+                        setApiStatus("신규 정류장 정보를 동기화 중입니다...", "success");
+                        let tempStops = [];
+                        for (let page = 1; page <= Math.ceil(currentCount / 1000); page++) {
+                            const data = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${cityCode}&numOfRows=1000&pageNo=${page}&_type=json`);
+                            const items = data?.response?.body?.items?.item;
+                            if (items) {
+                                const itemArr = Array.isArray(items) ? items : [items];
+                                tempStops = tempStops.concat(itemArr);
+                                if (itemArr.length < 1000) break;
+                            } else break;
+                        }
+
+                        if (tempStops.length > 0) {
+                            const map = new Map();
+                            tempStops.forEach(s => { if(s.nodeid && s.gpslati && s.gpslong) map.set(s.nodeid, s); });
+                            const finalData = Array.from(map.values());
+                            allCityStopsCache[cityCode] = finalData;
+
+                            try {
+                                Object.keys(localStorage).forEach(key => {
+                                    if (key.startsWith('bus_stops_') && key !== cacheKey) localStorage.removeItem(key);
+                                });
+                                localStorage.setItem(cacheKey, JSON.stringify({
+                                    timestamp: Date.now(),
+                                    totalCount: currentCount,
+                                    data: finalData
+                                }));
+                                setApiStatus("정류장 최신화 완료", "success");
+                            } catch(e) { console.warn("로컬 스토리지 용량 초과", e); }
+                        }
+                    }
+                } catch (e) { console.error("업데이트 체크 실패", e); }
+                
+                isPrefetching = false;
+                return allCityStopsCache[cityCode] || [];
+            })();
+
+            return stopFetchPromise[cityCode];
+        }
 
         // --- 뷰 & 탭 제어 로직 ---
         function switchTab(tabId) {
             if (tabId === 'bus') { document.getElementById('tab-bus').className = "flex-1 py-4 text-center tab-active transition-colors border-b-2"; document.getElementById('tab-stop').className = "flex-1 py-4 text-center tab-inactive transition-colors border-b-2"; document.getElementById('panel-bus').classList.remove('hidden'); document.getElementById('panel-stop').classList.add('hidden'); } 
             else { document.getElementById('tab-stop').className = "flex-1 py-4 text-center tab-active transition-colors border-b-2"; document.getElementById('tab-bus').className = "flex-1 py-4 text-center tab-inactive transition-colors border-b-2"; document.getElementById('panel-stop').classList.remove('hidden'); document.getElementById('panel-bus').classList.add('hidden'); }
+        }
+
+        function showSidebarList() {
+            document.getElementById('sidebar-view-detail').classList.add('hidden');
+            document.getElementById('sidebar-view-list').classList.remove('hidden');
+            if (highlightStopMarker) { map.removeLayer(highlightStopMarker); highlightStopMarker = null; }
+        }
+
+        function closeMapSidebar() {
+            document.getElementById('map-sidebar').classList.add('hidden');
+            document.getElementById('sidebar-view-detail').classList.add('hidden');
+            document.getElementById('sidebar-view-list').classList.remove('hidden');
+            dongStopsLayer.clearLayers();
+            if (highlightStopMarker) { map.removeLayer(highlightStopMarker); highlightStopMarker = null; }
+            if (previewStopMarker) { map.removeLayer(previewStopMarker); previewStopMarker = null; }
+            setApiStatus("검색 대기 중");
+            setTimeout(() => map.invalidateSize(), 150);
         }
 
         function showHomeScreen() {
@@ -478,6 +732,11 @@
             if (alarmIntervalId) { clearInterval(alarmIntervalId); activeAlarm = null; alarmIntervalId = null; }
             hideSelectionBanner(); stopMarkersLayer.clearLayers(); dongStopsLayer.clearLayers(); routePolylines.forEach(p => map.removeLayer(p)); routePolylines = [];
             if (highlightStopMarker) { map.removeLayer(highlightStopMarker); highlightStopMarker = null; } if (previewStopMarker) { map.removeLayer(previewStopMarker); previewStopMarker = null; }
+            
+            document.getElementById('map-sidebar').classList.add('hidden');
+            document.getElementById('sidebar-view-detail').classList.add('hidden');
+            document.getElementById('sidebar-view-list').classList.remove('hidden');
+            
             document.getElementById('route-no-select').value = ""; setApiStatus("검색 대기 중");
         }
 
@@ -485,11 +744,24 @@
         async function fetchAllRoutes() {
             setApiStatus("노선 데이터를 불러오는 중입니다..."); updateApiStatusUI('checking');
             try {
-                const data = await safeFetchJson(`${API_CONFIG.baseUrlRoute}/getRouteNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&numOfRows=1000&pageNo=1&_type=json`); 
-                const items = data?.response?.body?.items?.item;
-                if (!items && !data?.response?.body) updateApiStatusUI('disconnected'); else updateApiStatusUI('connected');
-                allRoutes = items ? (Array.isArray(items) ? items : [items]).sort((a, b) => (parseInt(a.routeno) || 0) - (parseInt(b.routeno) || 0) || String(a.routeno).localeCompare(String(b.routeno))) : [];
-                const types = [...new Set(allRoutes.map(r => r.routetp))].filter(Boolean); const typeSelect = document.getElementById('route-type-select'); typeSelect.innerHTML = '<option value="all">전체 노선</option>'; types.forEach(type => { const opt = document.createElement('option'); opt.value = type; opt.textContent = type; typeSelect.appendChild(opt); });
+                let items = [];
+                for (let page = 1; page <= 3; page++) {
+                    const data = await safeFetchJson(`${API_CONFIG.baseUrlRoute}/getRouteNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&numOfRows=500&pageNo=${page}&_type=json`); 
+                    const curItems = data?.response?.body?.items?.item;
+                    if(curItems) {
+                        const itemArr = Array.isArray(curItems) ? curItems : [curItems];
+                        items = items.concat(itemArr);
+                        if(itemArr.length < 500) break;
+                    } else break;
+                }
+                
+                if (items.length === 0) updateApiStatusUI('disconnected'); else updateApiStatusUI('connected');
+                allRoutes = items.sort((a, b) => (parseInt(a.routeno) || 0) - (parseInt(b.routeno) || 0) || String(a.routeno).localeCompare(String(b.routeno)));
+                
+                const types = [...new Set(allRoutes.map(r => r.routetp))].filter(Boolean).sort((a, b) => a.localeCompare(b)); 
+                const typeSelect = document.getElementById('route-type-select'); typeSelect.innerHTML = '<option value="all">전체 노선</option>'; 
+                types.forEach(type => { const opt = document.createElement('option'); opt.value = type; opt.textContent = type; typeSelect.appendChild(opt); });
+                
                 updateRouteNoList(); setApiStatus("로드 완료. 검색을 시작하세요.", "success");
             } catch (error) { updateApiStatusUI('disconnected'); setApiStatus("서버 통신 오류. 새로고침 해주세요.", "error"); }
         }
@@ -502,97 +774,159 @@
 
         function onSelectBus() { const noSelect = document.getElementById('route-no-select'); if (!noSelect.value) return; const opt = noSelect.options[noSelect.selectedIndex]; startRouteTracking(opt.value, opt.dataset.routeno, opt.dataset.routetp); }
 
-        // --- 2. 정류장 검색 (전체 스탑 로드 및 반경 필터 최적화) ---
-        async function getAllStopsForCity(cityCode) {
-            if (allCityStopsCache[cityCode]) return allCityStopsCache[cityCode];
-            
-            let allStops = [];
-            try {
-                for (let page = 1; page <= 10; page++) {
-                    const data = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${cityCode}&numOfRows=500&pageNo=${page}&_type=json`);
-                    const items = data?.response?.body?.items?.item;
-                    if (items) {
-                        const itemArr = Array.isArray(items) ? items : [items];
-                        allStops = allStops.concat(itemArr);
-                        if (itemArr.length < 500) break;
-                    } else break;
-                }
-                if (allStops.length > 0) { 
-                    const map = new Map(); allStops.forEach(s => map.set(s.nodeid, s)); 
-                    allCityStopsCache[cityCode] = Array.from(map.values()); 
-                    return allCityStopsCache[cityCode]; 
-                }
-            } catch (e) {} return [];
-        }
-
+        // --- 2. 정류장 검색 (캐시 100% 활용) ---
         async function onSearchStopClick() {
-            const city = document.getElementById('region-city').value; if (!city) { showToast("시/군/구를 선택해주세요."); return; }
-            const stopNameInput = document.getElementById('stop-name-search').value.trim(); const dongSelect = document.getElementById('region-dong');
-            let dong = !dongSelect.classList.contains('hidden') ? dongSelect.value : '';
-            if (stopNameInput) { await executeStopSearch(stopNameInput, 'name'); } else if (dong) { await executeStopSearch(dong, 'area'); } else { showToast("정류장 이름이나 지역을 입력/선택해주세요."); }
+            const cityCode = API_CONFIG.cityCode;
+            if (!cityCode) { showToast("지역 정보 로드 대기 중입니다. 잠시 후 시도해주세요."); return; }
+            
+            const stopNameInput = document.getElementById('stop-name-search').value.trim(); 
+            const dongSelect = document.getElementById('region-dong');
+            let dong = !dongSelect.classList.contains('hidden') && dongSelect.value ? dongSelect.value : '';
+            
+            if (stopNameInput) { await executeStopSearch(stopNameInput, 'name'); } 
+            else if (dong) { await executeStopSearch(dong, 'area'); } 
+            else { showToast("정류장 이름이나 지역(동/읍/면)을 선택해주세요."); }
         }
 
         async function executeStopSearch(keyword, searchType) {
-            setApiStatus(`정류장 검색 중... (수 초 소요될 수 있습니다)`);
+            setApiStatus(`정류장 데이터를 불러오는 중...`);
             try {
+                const cityCode = API_CONFIG.cityCode;
+                const cachedStops = await prefetchCityStops(cityCode) || [];
                 let combinedItems = [];
+                
+                document.getElementById('sidebar-view-detail').classList.add('hidden');
+                document.getElementById('sidebar-view-list').classList.remove('hidden');
+
                 if (searchType === 'name') {
-                    const dataNm = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&nodeNm=${encodeURIComponent(keyword)}&numOfRows=500&pageNo=1&_type=json`);
-                    if (dataNm?.response?.body?.items?.item) { const items = dataNm.response.body.items.item; combinedItems = Array.isArray(items) ? items : [items]; }
+                    if (cachedStops.length > 0) {
+                        combinedItems = cachedStops.filter(s => s.nodenm.includes(keyword) || (s.nodeno && s.nodeno.includes(keyword)));
+                    }
+                    if (combinedItems.length === 0) {
+                        const dataNm = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${cityCode}&nodeNm=${encodeURIComponent(keyword)}&numOfRows=500&pageNo=1&_type=json`);
+                        if (dataNm?.response?.body?.items?.item) { 
+                            const items = dataNm.response.body.items.item; 
+                            combinedItems = Array.isArray(items) ? items : [items]; 
+                        }
+                    }
                 } else if (searchType === 'area') {
-                    let cleanKeyword = keyword.replace(/[0-9]*동$/, '').replace(/읍$/, '').replace(/면$/, ''); if (cleanKeyword.length < 2) cleanKeyword = keyword.replace(/[0-9]*동$/, ''); if (cleanKeyword.length < 2) cleanKeyword = keyword;
-                    const center = dongCoordinates[keyword] || dongCoordinates[cleanKeyword]; const allStops = await getAllStopsForCity(API_CONFIG.cityCode);
+                    let cleanKeyword = keyword.replace(/[0-9]*동$/, '').replace(/읍$/, '').replace(/면$/, ''); 
+                    if (cleanKeyword.length < 2) cleanKeyword = keyword.replace(/[0-9]*동$/, ''); 
+                    if (cleanKeyword.length < 2) cleanKeyword = keyword;
                     
-                    if (center && allStops.length > 0) { 
-                        // 지역 스케일에 맞춰 반경을 타이트하게 조절하여 다른 지역 정류장 혼입 방지
-                        let radius = 1.5; // 동 기준 기본 1.5km
-                        if (keyword.endsWith('읍')) radius = 3.5; // 읍은 3.5km 반경 허용
-                        if (keyword.endsWith('면')) radius = 4.5; // 면은 4.5km 반경 허용
+                    const center = dongCoordinates[keyword] || dongCoordinates[cleanKeyword]; 
+                    
+                    if (center && cachedStops.length > 0) { 
+                        let radius = 1.5; 
+                        if (keyword.endsWith('읍')) radius = 3.5; 
+                        if (keyword.endsWith('면')) radius = 4.5; 
                         
-                        combinedItems = allStops.filter(s => { 
+                        combinedItems = cachedStops.filter(s => { 
                             if (!s.gpslati || !s.gpslong) return false; 
                             return getDistance(center[0], center[1], parseFloat(s.gpslati), parseFloat(s.gpslong)) <= radius; 
                         }); 
-                    } 
-                    else {
-                        combinedItems = allStops.filter(s => s.nodenm.includes(cleanKeyword));
-                        if(combinedItems.length === 0) {
-                             const dataNm = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&nodeNm=${encodeURIComponent(cleanKeyword)}&numOfRows=500&pageNo=1&_type=json`);
-                             if (dataNm?.response?.body?.items?.item) { const items = dataNm.response.body.items.item; combinedItems = Array.isArray(items) ? items : [items]; }
+                    } else {
+                        if (center) {
+                            try {
+                                const dataCrdnt = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getCrdntPrxmtSttnList?serviceKey=${API_CONFIG.serviceKey}&gpsLati=${center[0]}&gpsLong=${center[1]}&numOfRows=500&pageNo=1&_type=json`);
+                                if (dataCrdnt?.response?.body?.items?.item) {
+                                    const items = dataCrdnt.response.body.items.item;
+                                    combinedItems = Array.isArray(items) ? items : [items];
+                                }
+                            } catch(e) {}
+                        } else {
+                            if (cachedStops.length > 0) {
+                                combinedItems = cachedStops.filter(s => s.nodenm.includes(cleanKeyword));
+                            }
+                            if (combinedItems.length === 0) {
+                                 const dataNm = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnNoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${cityCode}&nodeNm=${encodeURIComponent(cleanKeyword)}&numOfRows=500&pageNo=1&_type=json`);
+                                 if (dataNm?.response?.body?.items?.item) { const items = dataNm.response.body.items.item; combinedItems = Array.isArray(items) ? items : [items]; }
+                            }
                         }
                     }
                 }
 
-                const uniqueStopsMap = new Map(); combinedItems.forEach(stop => { if (stop.nodeid && stop.gpslati && stop.gpslong) uniqueStopsMap.set(stop.nodeid, stop); });
-                if (uniqueStopsMap.size === 0) { showToast(`검색 결과가 없습니다.`); setApiStatus("검색 결과 없음", "error"); return; }
+                if (combinedItems.length === 0) { showToast(`검색 결과가 없습니다.`); setApiStatus("검색 결과 없음", "error"); return; }
+                
+                const uniqueStopsMap = new Map(); 
+                combinedItems.forEach(stop => { if (stop.nodeid && stop.gpslati && stop.gpslong) uniqueStopsMap.set(stop.nodeid, stop); });
                 currentDongStops = Array.from(uniqueStopsMap.values()).sort((a, b) => a.nodenm.localeCompare(b.nodenm));
                 
-                document.getElementById('view-home').classList.add('hidden'); document.getElementById('view-diagram').classList.add('hidden'); document.getElementById('view-map').classList.remove('hidden'); document.getElementById('btn-home').classList.remove('hidden'); setTimeout(() => { map.invalidateSize(); }, 100); 
+                document.getElementById('view-home').classList.add('hidden'); document.getElementById('view-diagram').classList.add('hidden'); document.getElementById('view-map').classList.remove('hidden'); document.getElementById('btn-home').classList.remove('hidden'); 
+                
+                setTimeout(() => map.invalidateSize(), 50); 
                 
                 setTimeout(() => {
                     if(highlightStopMarker) { map.removeLayer(highlightStopMarker); highlightStopMarker = null; } if(previewStopMarker) { map.removeLayer(previewStopMarker); previewStopMarker = null; }
-                    stopMarkersLayer.clearLayers(); dongStopsLayer.clearLayers(); routePolylines.forEach(p => map.removeLayer(p)); routePolylines = []; document.getElementById('stop-routes-overlay').classList.add('hidden'); Object.values(busMarkers).forEach(m => map.removeLayer(m)); busMarkers = {}; if(updateIntervalId) { clearInterval(updateIntervalId); updateIntervalId = null; }
+                    stopMarkersLayer.clearLayers(); dongStopsLayer.clearLayers(); routePolylines.forEach(p => map.removeLayer(p)); routePolylines = []; Object.values(busMarkers).forEach(m => map.removeLayer(m)); busMarkers = {}; if(updateIntervalId) { clearInterval(updateIntervalId); updateIntervalId = null; }
 
+                    let listHtml = '';
                     const bounds = [];
                     currentDongStops.forEach(stop => {
                         const lat = parseFloat(stop.gpslati); const lng = parseFloat(stop.gpslong); bounds.push([lat, lng]);
                         const marker = L.circleMarker([lat, lng], { radius: 6, color: '#2563eb', fillColor: '#ffffff', fillOpacity: 1, weight: 2 });
                         marker.bindTooltip(stop.nodenm, { permanent: true, direction: 'top', offset: [0, -6], className: 'stop-label' });
                         marker.on('click', () => { onSelectStop(stop.nodeid, stop.nodenm, lat, lng); }); dongStopsLayer.addLayer(marker);
+                        
+                        listHtml += `<button id="sidebar-stop-btn-${stop.nodeid}" onclick="onSelectStop('${stop.nodeid}', '${stop.nodenm}', ${lat}, ${lng})" class="w-full text-left p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors flex items-center justify-between shadow-sm">
+                            <span class="font-bold text-sm text-gray-800 truncate">${stop.nodenm}</span>
+                            <span class="text-[10px] text-gray-400 font-mono ml-2 shrink-0">${stop.nodeno || ''}</span>
+                        </button>`;
                     });
-                    if(bounds.length > 0) map.fitBounds(bounds, { padding: [50, 50] }); setApiStatus("지도에서 정류장을 선택하세요.", "success");
+                    
+                    document.getElementById('sidebar-stop-list').innerHTML = listHtml;
+                    document.getElementById('sidebar-title').textContent = `검색 결과 (${currentDongStops.length}개)`;
+                    
+                    document.getElementById('map-sidebar').classList.remove('hidden');
+                    document.getElementById('sidebar-view-detail').classList.add('hidden');
+                    document.getElementById('sidebar-view-list').classList.remove('hidden');
+                    
+                    setTimeout(() => map.invalidateSize(), 150);
+                    if(bounds.length > 0) map.fitBounds(bounds, { padding: [50, 50] }); setApiStatus("지도 또는 왼쪽 목록에서 정류장을 선택하세요.", "success");
                 }, 200);
             } catch (error) { console.error(error); showToast('검색 중 오류가 발생했습니다.'); setApiStatus("검색 에러", "error"); }
         }
 
         async function onSelectStop(nodeid, nodenm, lat, lng) {
+            currentStopNameForArrival = nodenm; 
             if (lat && lng) {
-                map.flyTo([lat, lng], 16, { duration: 0.5 }); if(previewStopMarker) map.removeLayer(previewStopMarker); if(highlightStopMarker) map.removeLayer(highlightStopMarker);
+                let shiftX = 0;
+                if (window.innerWidth >= 768) {
+                    const leftSidebar = document.getElementById('map-sidebar');
+                    let leftW = leftSidebar.classList.contains('hidden') ? 0 : leftSidebar.offsetWidth;
+                    shiftX = leftW / 4; 
+                }
+                const targetPoint = map.project([lat, lng], 16).add([shiftX, 0]); 
+                const targetLatLng = map.unproject(targetPoint, 16);
+                map.flyTo(targetLatLng, 16, { duration: 0.5 }); 
+                
+                if(previewStopMarker) map.removeLayer(previewStopMarker); if(highlightStopMarker) map.removeLayer(highlightStopMarker);
                 highlightStopMarker = L.marker([lat, lng], { icon: L.divIcon({ className: 'stop-marker', html: `<div class="bg-red-500 w-5 h-5 rounded-full border-4 border-white shadow-lg pulse-red-active"></div>`, iconSize: [20, 20], iconAnchor: [10, 10] }), zIndexOffset: 1000 }).addTo(map);
                 highlightStopMarker.bindPopup(`<div class="font-bold text-center">${nodenm}<br><span class="text-xs font-normal text-gray-500">선택됨</span></div>`).openPopup();
             }
-            document.getElementById('stop-routes-overlay').classList.remove('hidden'); document.getElementById('overlay-stop-name').textContent = nodenm; document.getElementById('stop-search-sort').value = currentArrivalSort; 
-            const listContainer = document.getElementById('stop-route-list'); listContainer.innerHTML = '<div class="text-sm text-center py-6 text-gray-500 font-medium animate-pulse">경유 노선 및 실시간 도착 정보를 불러오는 중...</div>';
+            
+            document.querySelectorAll('[id^="sidebar-stop-btn-"]').forEach(btn => {
+                btn.classList.remove('border-blue-600', 'bg-blue-50', 'ring-1', 'ring-blue-600');
+                btn.classList.add('border-gray-200', 'bg-white');
+            });
+            const activeBtn = document.getElementById(`sidebar-stop-btn-${nodeid}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-gray-200', 'bg-white');
+                activeBtn.classList.add('border-blue-600', 'bg-blue-50', 'ring-1', 'ring-blue-600');
+                activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            document.getElementById('sidebar-view-list').classList.add('hidden');
+            document.getElementById('sidebar-view-detail').classList.remove('hidden');
+            
+            document.getElementById('sidebar-detail-title').textContent = nodenm; 
+            document.getElementById('stop-search-sort').value = currentArrivalSort; 
+            
+            const listContainer = document.getElementById('stop-route-list'); 
+            listContainer.innerHTML = '<div class="text-sm text-center py-6 text-gray-500 font-medium animate-pulse">경유 노선 및 실시간 도착 정보를 불러오는 중...</div>';
+            
+            setTimeout(() => map.invalidateSize(), 150); 
+
             try { currentArrivalData = await fetchStopArrivalData(nodeid); renderStopSearchArrivals(currentArrivalSort); } catch (error) { listContainer.innerHTML = `<div class="text-sm text-center py-6 text-red-500 font-medium">데이터를 불러오지 못했습니다. 일시적인 장애일 수 있습니다.</div>`; }
         }
 
@@ -611,26 +945,126 @@
 
         function generateArrivalListHtml(routes, isDiagramPopup = false) {
             if (!routes || routes.length === 0) return '<div class="text-sm text-center py-4 text-gray-500">운행하는 버스가 없습니다.</div>';
-            let html = '';
+            
+            let imminentHtml = ''; // 잠시후 도착 (2분 이내)
+            let normalHtml = '';   // 일반 도착
+
             routes.forEach(route => {
-                let badgeColor = "bg-gray-100 text-gray-800"; if (route.routetp) { if (route.routetp.includes('간선')) badgeColor = "bg-blue-100 text-blue-800"; else if (route.routetp.includes('지선') || route.routetp.includes('마을')) badgeColor = "bg-green-100 text-green-800"; else if (route.routetp.includes('급행') || route.routetp.includes('좌석')) badgeColor = "bg-red-100 text-red-800"; }
-                let arrivals = route.arrivals || []; arrivals.sort((a, b) => a.arrtime - b.arrtime); let arrInfoHtml = `<span class="text-xs text-gray-400 mt-1">도착 정보 없음</span>`; let nextArrInfoHtml = '';
-                if (arrivals.length > 0) {
-                    const min1 = Math.floor(arrivals[0].arrtime / 60); const minText1 = min1 === 0 ? '잠시 후' : `${min1}분`; arrInfoHtml = `<span class="text-sm font-bold text-red-600">${minText1} <span class="text-[10px] font-normal text-gray-500">(${arrivals[0].arrprevstationcnt}전)</span></span>`;
-                    if (arrivals.length > 1) { const min2 = Math.floor(arrivals[1].arrtime / 60); const minText2 = min2 === 0 ? '잠시 후' : `${min2}분`; nextArrInfoHtml = `<div class="text-[10px] text-gray-400 mt-0.5">(다음: ${minText2}, ${arrivals[1].arrprevstationcnt}전)</div>`; }
+                let badgeColor = "bg-gray-100 text-gray-800"; 
+                if (route.routetp) { 
+                    if (route.routetp.includes('간선')) badgeColor = "bg-blue-100 text-blue-800 border-blue-200"; 
+                    else if (route.routetp.includes('지선') || route.routetp.includes('마을')) badgeColor = "bg-green-100 text-green-800 border-green-200"; 
+                    else if (route.routetp.includes('급행') || route.routetp.includes('좌석')) badgeColor = "bg-red-100 text-red-800 border-red-200"; 
                 }
-                const clickAction = isDiagramPopup ? `onclick="changeRouteFromPopup('${route.routeid}', '${route.routeno}', '${route.routetp || '일반'}')"` : `onclick="document.getElementById('stop-routes-overlay').classList.add('hidden'); dongStopsLayer.clearLayers(); if(highlightStopMarker) { map.removeLayer(highlightStopMarker); highlightStopMarker = null; } startRouteTracking('${route.routeid}', '${route.routeno}', '${route.routetp || '일반'}');"`;
-                html += `<button ${clickAction} class="flex justify-between items-start w-full p-2.5 text-left bg-white border border-gray-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-colors group mb-1 shadow-sm"><div class="flex flex-col w-full"><div class="flex justify-between items-start w-full gap-1"><div class="flex items-center gap-1.5 mt-0.5"><span class="font-black text-gray-800 text-[16px] group-hover:text-blue-700 leading-none">${route.routeno}</span><span class="text-[9px] px-1 py-0.5 rounded font-bold border border-gray-200 ${badgeColor} whitespace-nowrap leading-none">${route.routetp || '버스'}</span></div><div class="text-right flex flex-col items-end whitespace-nowrap">${arrInfoHtml}${nextArrInfoHtml}</div></div></div></button>`;
-            }); return html;
+
+                let arrivals = route.arrivals || []; 
+                arrivals.sort((a, b) => a.arrtime - b.arrtime); 
+                
+                const clickAction = isDiagramPopup ? `onclick="changeRouteFromPopup('${route.routeid}', '${route.routeno}', '${route.routetp || '일반'}')"` : `onclick="document.getElementById('map-sidebar').classList.add('hidden'); document.getElementById('sidebar-view-detail').classList.add('hidden'); document.getElementById('sidebar-view-list').classList.remove('hidden'); dongStopsLayer.clearLayers(); if(highlightStopMarker) { map.removeLayer(highlightStopMarker); highlightStopMarker = null; } startRouteTracking('${route.routeid}', '${route.routeno}', '${route.routetp || '일반'}', true);"`;
+
+                if (arrivals.length === 0) {
+                    normalHtml += `<button ${clickAction} class="w-full mb-1.5 p-2.5 bg-white border border-gray-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-colors flex items-center justify-between shadow-sm">
+                        <div class="flex flex-col items-start w-[70px] shrink-0">
+                            <span class="font-black text-xl text-gray-800 leading-none">${route.routeno}</span>
+                        </div>
+                        <div class="flex-1 text-right text-xs text-gray-400 font-medium pr-2">도착 정보 없음</div>
+                    </button>`;
+                } else {
+                    const arr = arrivals[0];
+                    const min = Math.floor(arr.arrtime / 60);
+                    const isImminent = min <= 2;
+                    
+                    let timeDisplay = min === 0 ? '<span class="text-sm">잠시후</span>' : `<span class="text-2xl">${min}</span><span class="text-sm font-bold ml-0.5">분</span>`;
+                    
+                    let nextInfo = '';
+                    if (arrivals.length > 1) {
+                        const nextMin = Math.floor(arrivals[1].arrtime / 60);
+                        nextInfo = `<div class="absolute -bottom-1 left-0 w-full text-center text-[9px] text-gray-400 whitespace-nowrap">다음: ${nextMin === 0 ? '잠시후' : nextMin+'분'}</div>`;
+                    }
+
+                    let prevStopText = `${arr.arrprevstationcnt}정거장 전`;
+                    const maxStops = 10;
+                    let percent = Math.max(5, 95 - (Math.min(arr.arrprevstationcnt, maxStops) / maxStops * 90));
+                    
+                    let itemHtml = `<button ${clickAction} class="w-full mb-1.5 p-3 bg-white border border-gray-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-colors flex items-center shadow-sm relative overflow-hidden group">
+                        <div class="flex flex-col items-start w-[70px] shrink-0">
+                            <span class="font-black text-xl text-gray-800 leading-none group-hover:text-blue-700">${route.routeno}</span>
+                            <span class="text-[9px] px-1 py-0.5 rounded font-bold border mt-1.5 ${badgeColor}">${route.routetp || '버스'}</span>
+                        </div>
+                        
+                        <div class="w-[60px] flex justify-center shrink-0 border-r border-gray-100 pr-2 relative h-full items-center text-red-600 font-black tracking-tighter">
+                            ${timeDisplay}
+                            ${nextInfo}
+                        </div>
+                        
+                        <div class="flex-1 flex flex-col justify-center pl-3 min-w-0">
+                            <div class="flex justify-between items-center w-full text-[11px] font-bold mb-1.5 text-gray-600">
+                                <span class="truncate bg-gray-100 px-1.5 py-0.5 rounded text-gray-500 border border-gray-200">${prevStopText}</span>
+                                <span class="truncate pl-2 text-gray-800 text-right w-full">${currentStopNameForArrival}</span>
+                            </div>
+                            <div class="w-full relative flex items-center h-1 bg-gray-200 rounded-full">
+                                <div class="absolute left-0 h-1 bg-blue-500 rounded-full transition-all" style="width: ${percent}%;"></div>
+                                <div class="absolute w-5 h-5 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center shadow-sm z-10" style="left: calc(${percent}% - 10px);">
+                                    <span class="text-[10px]">🚌</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>`;
+
+                    if (isImminent) {
+                        imminentHtml += itemHtml;
+                    } else {
+                        normalHtml += itemHtml;
+                    }
+                }
+            });
+
+            let finalHtml = '';
+            if (imminentHtml) {
+                finalHtml += `<div class="mb-3">
+                    <div class="flex items-center gap-1.5 px-1 mb-2">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                        <h4 class="text-xs font-black text-red-600">잠시 후 도착</h4>
+                    </div>
+                    ${imminentHtml}
+                </div>`;
+            }
+            if (normalHtml) {
+                finalHtml += `<div>
+                    ${imminentHtml ? `<div class="flex items-center gap-1.5 px-1 mb-2 mt-4"><h4 class="text-xs font-bold text-gray-500">도착 예정</h4></div>` : ''}
+                    ${normalHtml}
+                </div>`;
+            }
+
+            return finalHtml || '<div class="text-sm text-center py-4 text-gray-500">도착 정보가 없습니다.</div>';
         }
 
-        function changeRouteFromPopup(routeid, routeno, routetp) { closeGeneralPopup(); startRouteTracking(routeid, routeno, routetp); }
+        function changeRouteFromPopup(routeid, routeno, routetp) { 
+            closeGeneralPopup(); 
+            startRouteTracking(routeid, routeno, routetp, true); 
+        }
         function renderDiagramArrivals(sortType) { currentArrivalSort = sortType; document.getElementById('diagram-stop-arrival-list').innerHTML = generateArrivalListHtml(sortArrivalData(currentArrivalData, sortType), true); }
         function renderStopSearchArrivals(sortType) { currentArrivalSort = sortType; document.getElementById('stop-route-list').innerHTML = generateArrivalListHtml(sortArrivalData(currentArrivalData, sortType), false); }
 
         function openAlarmSetupPopup(stopId, stopNm) {
             closeGeneralPopup(); const modal = document.getElementById('alarm-setup-modal'); document.getElementById('alarm-setup-stop-name').textContent = stopNm; const routeSelect = document.getElementById('alarm-route-select'); routeSelect.innerHTML = '';
-            if (currentArrivalData.length > 0) { currentArrivalData.forEach(r => { const opt = document.createElement('option'); opt.value = r.routeid; opt.dataset.routeno = r.routeno; opt.textContent = `${r.routeno}번 버스`; if (r.routeid === currentRouteId) opt.selected = true; routeSelect.appendChild(opt); }); } else routeSelect.innerHTML = '<option value="">운행중인 버스 없음</option>';
+            
+            // 도착 예정인 버스가 없어도 현재 띄워진 노선이면 무조건 알람 설정 가능하도록 추가
+            const addedRoutes = new Set();
+            if (currentRouteId) {
+                const opt = document.createElement('option'); opt.value = currentRouteId; opt.dataset.routeno = currentRouteNo; opt.textContent = `${currentRouteNo}번 버스`; opt.selected = true; routeSelect.appendChild(opt);
+                addedRoutes.add(currentRouteId);
+            }
+            if (currentArrivalData.length > 0) { 
+                currentArrivalData.forEach(r => { 
+                    if (!addedRoutes.has(r.routeid)) {
+                        const opt = document.createElement('option'); opt.value = r.routeid; opt.dataset.routeno = r.routeno; opt.textContent = `${r.routeno}번 버스`; routeSelect.appendChild(opt); 
+                        addedRoutes.add(r.routeid);
+                    }
+                }); 
+            } 
+            if (addedRoutes.size === 0) routeSelect.innerHTML = '<option value="">운행중인 버스 없음</option>';
+            
             modal.dataset.stopid = stopId; modal.dataset.stopnm = stopNm; modal.classList.remove('hidden');
         }
         function closeAlarmSetup() { document.getElementById('alarm-setup-modal').classList.add('hidden'); }
@@ -638,20 +1072,63 @@
             const modal = document.getElementById('alarm-setup-modal'); const stopId = modal.dataset.stopid; const stopNm = modal.dataset.stopnm; const select = document.getElementById('alarm-route-select');
             if (select.options.length === 0 || !select.value) { showToast("알림을 설정할 버스가 없습니다."); return; }
             const routeId = select.value; const routeNo = select.options[select.selectedIndex].dataset.routeno; const threshold = parseInt(document.getElementById('alarm-threshold-select').value);
-            let stopIndex = currentRouteStops.findIndex(s => s.nodeid === stopId); let triggerStopIndex = -1; if(stopIndex !== -1) triggerStopIndex = Math.max(0, stopIndex - threshold);
-            activeAlarm = { stopId, stopNm, routeId, routeNo, threshold, isTriggered: false, triggerStopIndex };
-            if (alarmIntervalId) clearInterval(alarmIntervalId); alarmIntervalId = setInterval(checkActiveAlarm, 15000); 
+            
+            let stopIndex = currentRouteStops.findIndex(s => s.nodeid === stopId); 
+            let triggerStopIndex = -1; let targetNodeOrd = -1;
+            if(stopIndex !== -1) {
+                triggerStopIndex = Math.max(0, stopIndex - threshold);
+                targetNodeOrd = parseInt(currentRouteStops[stopIndex].nodeord) || -1;
+            }
+            
+            activeAlarm = { stopId, stopNm, routeId, routeNo, threshold, isTriggered: false, triggerStopIndex, targetNodeOrd };
+            if (alarmIntervalId) clearInterval(alarmIntervalId); alarmIntervalId = setInterval(checkActiveAlarm, 10000); 
             closeAlarmSetup(); showToast(`${routeNo}번 버스 도착 알림이 설정되었습니다.`); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); renderMapMarkers(); applyBusLocationsToUI(currentBusLocations);
+            
+            checkActiveAlarm(); // 설정 즉시 1회 체크
         }
         function cancelBusAlarm() { if (alarmIntervalId) clearInterval(alarmIntervalId); activeAlarm = null; alarmIntervalId = null; showToast("도착 알림 설정이 해제되었습니다."); closeGeneralPopup(); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); renderMapMarkers(); applyBusLocationsToUI(currentBusLocations); }
         async function checkActiveAlarm() {
             if (!activeAlarm || activeAlarm.isTriggered) return;
-            try {
-                const data = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnAcctoArvlPrearngeInfoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&nodeId=${activeAlarm.stopId}&numOfRows=100&pageNo=1&_type=json`); const items = data?.response?.body?.items?.item; if (!items) return;
-                const targetBus = (Array.isArray(items) ? items : [items]).find(r => r.routeid === activeAlarm.routeId);
-                if (targetBus && targetBus.arrprevstationcnt && parseInt(targetBus.arrprevstationcnt) <= activeAlarm.threshold) {
+            
+            // 1. 실시간 위치 API 기반 검증 (지금 여기 - 도착/통과를 가장 정확히 잡음)
+            if (currentRouteId === activeAlarm.routeId && currentBusLocations.length > 0 && activeAlarm.targetNodeOrd !== -1) {
+                const targetOrd = activeAlarm.targetNodeOrd;
+                const threshold = activeAlarm.threshold;
+                
+                const triggeredBus = currentBusLocations.find(bus => {
+                    if (!bus.nodeord) return false;
+                    const diff = targetOrd - bus.nodeord;
+                    // 알람 기준선 안으로 들어왔거나, 정류장을 막 지나친 직후(-2)까지만 잡아냄
+                    return diff <= threshold && diff >= -2;
+                });
+
+                if (triggeredBus) {
                     activeAlarm.isTriggered = true; clearInterval(alarmIntervalId); alarmIntervalId = null;
-                    document.getElementById('alarm-fire-msg').innerHTML = `<span class="text-blue-600 font-black text-xl">${activeAlarm.routeNo}번</span> 버스가<br><strong class="text-gray-800 text-lg">${activeAlarm.stopNm}</strong>에<br><span class="text-red-600 font-black text-xl">${parseInt(targetBus.arrprevstationcnt)}정거장 전</span> 입니다!`; document.getElementById('alarm-fire-modal').classList.remove('hidden');
+                    const diff = targetOrd - triggeredBus.nodeord;
+                    let msgStr = diff <= 0 ? '도착 및 통과' : `${diff}정거장 전`;
+                    document.getElementById('alarm-fire-msg').innerHTML = `<span class="text-blue-600 font-black text-xl">${activeAlarm.routeNo}번</span> 버스가<br><strong class="text-gray-800 text-lg">${activeAlarm.stopNm}</strong>에<br><span class="text-red-600 font-black text-xl">${msgStr}</span> 입니다!`; 
+                    document.getElementById('alarm-fire-modal').classList.remove('hidden');
+                    return;
+                }
+            }
+
+            // 2. 도착 예정 정보 API 기반 폴백 검증
+            try {
+                const data = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnAcctoArvlPrearngeInfoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&nodeId=${activeAlarm.stopId}&numOfRows=100&pageNo=1&_type=json`); 
+                const items = data?.response?.body?.items?.item; if (!items) return;
+                const targetBuses = (Array.isArray(items) ? items : [items]).filter(r => r.routeid === activeAlarm.routeId);
+                
+                for (let targetBus of targetBuses) {
+                    if (targetBus && targetBus.arrprevstationcnt) {
+                        const cnt = parseInt(targetBus.arrprevstationcnt);
+                        if (cnt <= activeAlarm.threshold) {
+                            activeAlarm.isTriggered = true; clearInterval(alarmIntervalId); alarmIntervalId = null;
+                            let msgStr = cnt === 0 ? '도착 및 통과' : `${cnt}정거장 전`;
+                            document.getElementById('alarm-fire-msg').innerHTML = `<span class="text-blue-600 font-black text-xl">${activeAlarm.routeNo}번</span> 버스가<br><strong class="text-gray-800 text-lg">${activeAlarm.stopNm}</strong>에<br><span class="text-red-600 font-black text-xl">${msgStr}</span> 입니다!`; 
+                            document.getElementById('alarm-fire-modal').classList.remove('hidden');
+                            return;
+                        }
+                    }
                 }
             } catch (e) {}
         }
@@ -667,6 +1144,7 @@
 
         async function openDiagramStopPopup(globalIndex, specialText) {
             if (checkSelectionState()) return; const stop = currentRouteStops[globalIndex];
+            currentStopNameForArrival = stop.nodenm; 
             let depClass = targetDepIndex === globalIndex ? 'bg-blue-600 text-white shadow-lg scale-105' : 'bg-gray-100 hover:bg-blue-50 text-gray-700'; let arrClass = targetArrIndex === globalIndex ? 'bg-red-600 text-white shadow-lg scale-105' : 'bg-gray-100 hover:bg-red-50 text-gray-700';
             let scheduleBtn = (specialText === '기점' || specialText === '회차' || specialText === '종점') ? `<button onclick="openSchedulePopup('${specialText}')" class="w-full mt-3 bg-gray-800 text-white font-bold py-3 rounded-xl hover:bg-gray-900 transition-colors shadow-md flex items-center justify-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ${specialText} 운행 시간표 보기</button>` : '';
             let alarmAreaHtml = activeAlarm && (globalIndex === activeAlarm.triggerStopIndex || stop.nodeid === activeAlarm.stopId) ? `<div class="flex gap-2 mt-3"><button onclick="cancelBusAlarm()" class="w-full py-3 bg-red-100 hover:bg-red-200 text-red-800 rounded-xl font-bold flex items-center justify-center gap-1.5 shadow-sm border border-red-300"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><line x1="2" y1="2" x2="22" y2="22"></line><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> 알림 설정 해제</button></div>` : `<div class="flex gap-2 mt-3"><button onclick="openAlarmSetupPopup('${stop.nodeid}', '${stop.nodenm}')" class="w-full py-3 bg-yellow-100 hover:bg-yellow-200 text-yellow-800 rounded-xl font-bold flex items-center justify-center gap-1.5 shadow-sm border border-yellow-300"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> 도착 알림 설정</button></div>`;
@@ -675,6 +1153,44 @@
             document.getElementById('diagram-general-modal').classList.remove('hidden');
 
             try { currentArrivalData = await fetchStopArrivalData(stop.nodeid); renderDiagramArrivals(currentArrivalSort); document.getElementById('diagram-arrival-sort').value = currentArrivalSort; } catch (e) { document.getElementById('diagram-stop-arrival-list').innerHTML = `<div class="text-[11px] text-center py-6 text-red-500">데이터 오류</div>`; }
+        }
+
+        function setAsDeparture(index) {
+            targetDepIndex = index;
+            if (targetArrIndex !== -1 && targetDepIndex >= targetArrIndex) {
+                targetArrIndex = -1; 
+                showToast("출발지가 도착지보다 이후에 있어 도착지 지정이 해제되었습니다.");
+            } else {
+                showToast("출발지가 지정되었습니다.");
+            }
+            closeGeneralPopup();
+            renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp);
+            renderMapMarkers();
+            applyBusLocationsToUI(currentBusLocations);
+        }
+
+        function setAsArrival(index) {
+            targetArrIndex = index;
+            if (targetDepIndex !== -1 && targetArrIndex <= targetDepIndex) {
+                targetDepIndex = -1; 
+                showToast("도착지가 출발지보다 이전에 있어 출발지 지정이 해제되었습니다.");
+            } else {
+                showToast("도착지가 지정되었습니다.");
+            }
+            closeGeneralPopup();
+            renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp);
+            renderMapMarkers();
+            applyBusLocationsToUI(currentBusLocations);
+        }
+
+        function clearStopSelection(index) {
+            if (targetDepIndex === index) targetDepIndex = -1;
+            if (targetArrIndex === index) targetArrIndex = -1;
+            showToast("정류장 지정이 해제되었습니다.");
+            closeGeneralPopup();
+            renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp);
+            renderMapMarkers();
+            applyBusLocationsToUI(currentBusLocations);
         }
 
         function openDiagramBusPopup(busId, event) {
@@ -783,14 +1299,22 @@
                     let lineDownHtml = drawVerticalDown ? `<div class="absolute top-1/2 left-1/2 w-1.5 h-32 ${cOut.bg} -translate-x-1/2"></div>` : '';
                     let arrowSvg = ''; if (!isLastInRoute) arrowSvg = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="${drawVerticalDown?'4,8 12,19 20,8':(isEvenRow?'8,4 19,12 8,20':'16,4 5,12 16,20')}"></polygon></svg>`;
 
-                    const badgePosClass = isEvenRow ? '-bottom-10' : '-top-10'; let depArrBadge = '', alarmBadge = '';
-                    if (globalIndex === targetDepIndex) depArrBadge = `<div class="absolute ${badgePosClass} left-1/2 ml-2 bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-md z-40 whitespace-nowrap animate-bounce">출발</div>`;
-                    else if (globalIndex === targetArrIndex) depArrBadge = `<div class="absolute ${badgePosClass} left-1/2 ml-2 bg-red-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-md z-40 whitespace-nowrap animate-bounce">도착</div>`;
-                    if (activeAlarm && globalIndex === activeAlarm.triggerStopIndex) alarmBadge = `<div class="absolute ${badgePosClass} right-1/2 mr-2 bg-yellow-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-md z-40 whitespace-nowrap animate-pulse flex items-center gap-0.5">🔔 알림</div>`;
+                    // 출발, 도착, 알림 배지를 아이콘보다 조금 더 큰 동그란 원형으로 만들고 이름의 반대쪽에 위치시킴
+                    let badges = [];
+                    if (globalIndex === targetDepIndex) badges.push(`<div class="w-10 h-10 bg-blue-600 border-[3px] border-white text-white text-[12px] font-black rounded-full shadow-lg flex items-center justify-center shrink-0 animate-bounce">출발</div>`);
+                    else if (globalIndex === targetArrIndex) badges.push(`<div class="w-10 h-10 bg-red-600 border-[3px] border-white text-white text-[12px] font-black rounded-full shadow-lg flex items-center justify-center shrink-0 animate-bounce">도착</div>`);
+                    if (activeAlarm && globalIndex === activeAlarm.triggerStopIndex) badges.push(`<div class="w-10 h-10 bg-yellow-400 border-[3px] border-white text-yellow-900 text-[10px] font-black rounded-full shadow-lg flex flex-col items-center justify-center shrink-0 animate-pulse leading-none"><span class="mb-0.5 text-[10px]">🔔</span>알림</div>`);
+
+                    let badgeHtml = '';
+                    if (badges.length > 0) {
+                        // 정류장 이름이 위(isEvenRow)면 배지는 아래에, 이름이 아래(!isEvenRow)면 배지는 위에 배치
+                        const positionClass = isEvenRow ? 'top-[calc(50%+12px)]' : 'bottom-[calc(50%+12px)]';
+                        badgeHtml = `<div class="absolute ${positionClass} left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">${badges.join('')}</div>`;
+                    }
 
                     let nodeHtml = isSpecialNode ? `<div onclick="onDiagramStopClick(${globalIndex}, event, '${specialText}')" class="relative w-10 h-10 bg-gray-500 border-[3px] border-gray-200 rounded-full z-20 shadow-md flex flex-col items-center justify-center text-white tracking-tighter break-keep leading-none cursor-pointer hover:scale-125 transition-transform"><span class="text-[11px] font-black pointer-events-none">${specialText}</span>${!isLastInRoute ? `<div class="mt-0.5 pointer-events-none">${arrowSvg}</div>` : ''}</div>` : `<div onclick="onDiagramStopClick(${globalIndex}, event, '')" class="relative w-6 h-6 bg-white border-[3px] ${cOut.border} rounded-full z-10 flex items-center justify-center ${cOut.text} cursor-pointer hover:scale-125 transition-transform"><span class="pointer-events-none">${!isLastInRoute ? arrowSvg : ''}</span></div>`;
 
-                    html += `<div class="relative flex flex-col items-center justify-center shrink-0" style="width: ${nodeWidth}px;">${depArrBadge}${alarmBadge}<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">${lineLeftHtml}${lineRightHtml}${lineDownHtml}</div><div class="absolute top-0 h-10 flex items-end justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${isEvenRow ? stop.nodenm : ''}</span></div>${nodeHtml}<div class="absolute bottom-0 h-10 flex items-start justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${!isEvenRow ? stop.nodenm : ''}</span></div><div id="diagram-bus-slot-${globalIndex}" class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-2 z-30 flex flex-col items-center justify-end w-32 h-32 pointer-events-none"></div></div>`;
+                    html += `<div class="relative flex flex-col items-center justify-center shrink-0" style="width: ${nodeWidth}px;"><div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">${lineLeftHtml}${lineRightHtml}${lineDownHtml}</div><div class="absolute top-0 h-10 flex items-end justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${isEvenRow ? stop.nodenm : ''}</span></div>${nodeHtml}${badgeHtml}<div class="absolute bottom-0 h-10 flex items-start justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${!isEvenRow ? stop.nodenm : ''}</span></div><div id="diagram-bus-slot-${globalIndex}" class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-2 z-30 flex flex-col items-center justify-end w-32 h-32 pointer-events-none"></div></div>`;
                 }); html += `</div>`; 
             }); document.getElementById('diagram-container').innerHTML = html + `</div>`;
         }
@@ -816,10 +1340,10 @@
             });
         }
 
-        async function startRouteTracking(routeId, routeNo, routeTp) {
-            document.getElementById('view-home').classList.add('hidden'); document.getElementById('btn-home').classList.remove('hidden');
-            myBusId = null; myBusState = 'none'; targetDepIndex = -1; targetArrIndex = -1; selectionState = 'none'; hideSelectionBanner();
-            if (viewMode === 'map') { document.getElementById('view-map').classList.remove('hidden'); document.getElementById('view-diagram').classList.add('hidden'); setTimeout(() => { map.invalidateSize(); }, 100); } 
+        async function startRouteTracking(routeId, routeNo, routeTp, preserveView = false) {
+            document.getElementById('view-home').classList.add('hidden'); document.getElementById('btn-home').classList.remove('hidden'); document.getElementById('map-sidebar').classList.add('hidden'); document.getElementById('sidebar-view-detail').classList.add('hidden'); document.getElementById('sidebar-view-list').classList.remove('hidden');
+            myBusId = null; myBusState = 'none'; targetDepIndex = -1; targetArrIndex = -1; selectionState = 'none'; missingBusTolerance = 0; hideSelectionBanner();
+            if (viewMode === 'map') { document.getElementById('view-map').classList.remove('hidden'); document.getElementById('view-diagram').classList.add('hidden'); setTimeout(() => { map.invalidateSize(); }, 150); } 
             else { document.getElementById('view-map').classList.add('hidden'); document.getElementById('view-diagram').classList.remove('hidden'); }
             setApiStatus(`${routeNo}번 버스 노선 렌더링 중...`);
             currentRouteId = routeId; currentRouteNo = routeNo; currentRouteTp = routeTp;
@@ -838,9 +1362,19 @@
                     const coordsFw = [], coordsBw = [];
                     currentRouteStops.forEach((stop, index) => { const lat = parseFloat(stop.gpslati); const lng = parseFloat(stop.gpslong); if (lat && lng) { if (currentTurnaroundIndex === -1) coordsFw.push([lat, lng]); else { if (index <= currentTurnaroundIndex) coordsFw.push([lat, lng]); if (index >= currentTurnaroundIndex) coordsBw.push([lat, lng]); } } });
 
-                    if (coordsFw.length > 0) { const roadPathFw = await getRoadSnappedPath(coordsFw); routePolylines.push(L.polyline(roadPathFw, { color: cSet.fwHex, weight: 8, opacity: 0.6, lineCap: 'round', lineJoin: 'round' }).addTo(map)); }
-                    if (coordsBw.length > 0) { const roadPathBw = await getRoadSnappedPath(coordsBw); const offsetPathBw = roadPathBw.map(c => [c[0] + 0.00015, c[1] + 0.00015]); routePolylines.push(L.polyline(offsetPathBw, { color: cSet.bwHex, weight: 4, opacity: 1, dashArray: '10, 10', lineCap: 'round', lineJoin: 'round' }).addTo(map)); }
-                    if (routePolylines.length > 0) map.fitBounds(new L.featureGroup(routePolylines).getBounds(), { padding: [30, 30] });
+                    // Polyline Offset 플러그인을 사용하여 도로 중앙 기준으로 나란히 평행하게 실선을 그림 (겹침 방지)
+                    if (coordsFw.length > 0) { 
+                        const roadPathFw = await getRoadSnappedPath(coordsFw); 
+                        routePolylines.push(L.polyline(roadPathFw, { color: cSet.fwHex, weight: 6, opacity: 0.85, lineCap: 'round', lineJoin: 'round', offset: -4 }).addTo(map)); 
+                    }
+                    if (coordsBw.length > 0) { 
+                        const roadPathBw = await getRoadSnappedPath(coordsBw); 
+                        routePolylines.push(L.polyline(roadPathBw, { color: cSet.bwHex, weight: 6, opacity: 0.85, lineCap: 'round', lineJoin: 'round', offset: 4 }).addTo(map)); 
+                    }
+                    
+                    if (routePolylines.length > 0 && !preserveView) {
+                        map.fitBounds(new L.featureGroup(routePolylines).getBounds(), { padding: [30, 30] });
+                    }
                 }
                 setApiStatus(`${routeNo}번 실시간 위치 동기화 시작`, "success"); updateBusLocations(); updateIntervalId = setInterval(updateBusLocations, 10000);
             } catch (error) { setApiStatus("노선 데이터 조회 에러", "error"); }
@@ -851,7 +1385,17 @@
             let cSet = colorSets.blue; if (currentRouteTp?.includes('지선') || currentRouteTp?.includes('마을')) cSet = colorSets.green; if (currentRouteTp?.includes('급행') || currentRouteTp?.includes('좌석')) cSet = colorSets.red;
 
             locations.forEach(bus => {
-                if (!bus.nodeord) return; const stopIndex = currentRouteStops.findIndex(s => parseInt(s.nodeord) === bus.nodeord);
+                let stopIndex = -1;
+                if (bus.nodeord) stopIndex = currentRouteStops.findIndex(s => parseInt(s.nodeord) === bus.nodeord);
+                
+                if (stopIndex === -1 && bus.lat && bus.lng && currentRouteStops.length > 0) {
+                    let minDist = Infinity;
+                    currentRouteStops.forEach((s, idx) => {
+                        const dist = getDistance(bus.lat, bus.lng, parseFloat(s.gpslati), parseFloat(s.gpslong));
+                        if (dist < minDist) { minDist = dist; stopIndex = idx; }
+                    });
+                }
+
                 if (stopIndex !== -1) {
                     let isTerminus = (stopIndex === 0 || stopIndex === currentRouteStops.length - 1 || stopIndex === currentTurnaroundIndex);
                     let finalIconColor = (currentTurnaroundIndex !== -1 && stopIndex >= currentTurnaroundIndex) ? cSet.bwBg : cSet.fwBg;
@@ -889,9 +1433,22 @@
             locations.forEach(bus => {
                 if (bus.lat === 0 || bus.lng === 0) return; const latLng = [bus.lat, bus.lng];
                 let nextStopName = '종점 (운행종료)'; let isTerminus = false; let stopIndex = -1;
+                
                 if (bus.nodeord && currentRouteStops.length > 0) {
                     stopIndex = currentRouteStops.findIndex(s => parseInt(s.nodeord) === bus.nodeord);
-                    if (stopIndex !== -1) { if (stopIndex === 0 || stopIndex === currentRouteStops.length - 1 || stopIndex === currentTurnaroundIndex) isTerminus = true; if (stopIndex + 1 < currentRouteStops.length) nextStopName = currentRouteStops[stopIndex + 1].nodenm; }
+                }
+                
+                if (stopIndex === -1 && bus.lat && bus.lng && currentRouteStops.length > 0) {
+                    let minDist = Infinity;
+                    currentRouteStops.forEach((s, idx) => {
+                        const dist = getDistance(bus.lat, bus.lng, parseFloat(s.gpslati), parseFloat(s.gpslong));
+                        if (dist < minDist) { minDist = dist; stopIndex = idx; }
+                    });
+                }
+
+                if (stopIndex !== -1) { 
+                    if (stopIndex === 0 || stopIndex === currentRouteStops.length - 1 || stopIndex === currentTurnaroundIndex) isTerminus = true; 
+                    if (stopIndex + 1 < currentRouteStops.length) nextStopName = currentRouteStops[stopIndex + 1].nodenm; 
                 }
 
                 let finalIconColorHex = (currentTurnaroundIndex !== -1 && stopIndex >= currentTurnaroundIndex) ? cSet.bwHex : cSet.fwHex;
@@ -927,10 +1484,47 @@
             if (!currentRouteId) return; 
             try {
                 const data = await safeFetchJson(`${API_CONFIG.baseUrlLocation}/getRouteAcctoBusLcList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&routeId=${currentRouteId}&numOfRows=100&pageNo=1&_type=json`);
-                const items = data?.response?.body?.items?.item; const locations = [];
-                if (items) { (Array.isArray(items) ? items : [items]).forEach((node, i) => { if (node.gpslati && node.gpslong) locations.push({ id: node.vehicleno || `API_BUS_${i}`, lat: parseFloat(node.gpslati), lng: parseFloat(node.gpslong), direction: node.nodenm ? `${node.nodenm}` : '운행중', nodeord: parseInt(node.nodeord) }); }); }
-                currentBusLocations = locations; applyBusLocationsToUI(locations); setApiStatus(`조회 완료: ${currentRouteNo}번 (${locations.length}대 운행 중)`, "success"); updateApiStatusUI('connected');
-            } catch (error) { updateApiStatusUI('disconnected'); setApiStatus("⚠️ 위치 갱신 지연 발생", "error"); }
+                
+                if (!data || !data.response || !data.response.header || data.response.header.resultCode !== "00") {
+                    setApiStatus("⚠️ 위치 갱신 지연 (서버 응답 불안정)", "error");
+                    return; 
+                }
+
+                let items = data.response.body?.items?.item;
+                const totalCount = parseInt(data.response.body?.totalCount || 0);
+                
+                if (totalCount === 0) {
+                    missingBusTolerance++;
+                    if (missingBusTolerance <= 3 && currentBusLocations.length > 0) return; 
+                    items = []; 
+                } else {
+                    missingBusTolerance = 0; 
+                    if (!items) return;
+                }
+
+                const locations = [];
+                if (items && (Array.isArray(items) ? items : [items]).length > 0) { 
+                    (Array.isArray(items) ? items : [items]).forEach((node, i) => { 
+                        if (node.gpslati && node.gpslong) {
+                            locations.push({ 
+                                id: node.vehicleno || `API_BUS_${i}`, 
+                                lat: parseFloat(node.gpslati), 
+                                lng: parseFloat(node.gpslong), 
+                                direction: node.nodenm ? `${node.nodenm}` : '운행중', 
+                                nodeord: parseInt(node.nodeord) 
+                            }); 
+                        }
+                    }); 
+                }
+                
+                currentBusLocations = locations; 
+                applyBusLocationsToUI(locations); 
+                setApiStatus(`조회 완료: ${currentRouteNo}번 (${locations.length}대 운행 중)`, "success"); 
+                updateApiStatusUI('connected');
+            } catch (error) { 
+                updateApiStatusUI('disconnected'); 
+                setApiStatus("⚠️ 위치 갱신 지연 발생", "error"); 
+            }
         }
     </script>
 </body>
