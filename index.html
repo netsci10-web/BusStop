@@ -81,7 +81,10 @@
                 <span class="hidden sm:inline">검색 홈으로</span>
             </button>
             <button onclick="openSettings()" class="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors" title="설정">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
             </button>
         </div>
     </header>
@@ -114,7 +117,7 @@
     <!-- [알람 설정 모달] -->
     <div id="alarm-setup-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-60 z-[6000] flex items-center justify-center backdrop-blur-sm transition-all">
         <div class="bg-white rounded-3xl shadow-2xl p-6 w-11/12 max-w-sm relative">
-            <h3 class="text-xl font-black text-gray-800 mb-1">도착 알림 설정</h3>
+            <h3 id="alarm-modal-title" class="text-xl font-black text-gray-800 mb-1">알림 설정</h3>
             <p id="alarm-setup-stop-name" class="text-xs font-bold text-blue-600 bg-blue-50 inline-block px-2 py-0.5 rounded-md mb-5">정류장 이름</p>
             <div class="space-y-4 mb-6">
                 <div><label class="block text-xs font-bold text-gray-500 mb-1.5">알림 받을 버스</label><select id="alarm-route-select" class="w-full border border-gray-300 rounded-xl p-3 text-sm font-bold text-gray-800 bg-gray-50 outline-none"></select></div>
@@ -136,7 +139,7 @@
     <div id="alarm-fire-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-80 z-[7000] flex items-center justify-center backdrop-blur-md transition-all">
         <div class="bg-white rounded-3xl shadow-2xl p-8 w-11/12 max-w-sm text-center transform scale-100 animate-bounce-slow border-4 border-yellow-400">
             <div class="text-6xl mb-4 animate-shake-bell inline-block">🔔</div>
-            <h2 class="text-2xl font-black text-red-600 mb-3">버스 도착 알림!</h2>
+            <h2 id="alarm-fire-title" class="text-2xl font-black text-red-600 mb-3">버스 알림!</h2>
             <p id="alarm-fire-msg" class="text-base font-medium text-gray-700 mb-6 leading-relaxed"></p>
             <button onclick="closeAlarmFire()" class="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-black rounded-xl shadow-lg transition-colors text-lg">확인</button>
         </div>
@@ -146,7 +149,12 @@
     <div id="settings-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-[5000] flex items-center justify-center backdrop-blur-sm transition-all">
         <div class="bg-white rounded-2xl shadow-2xl p-6 w-11/12 max-w-sm">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-600"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> 화면 설정</h3>
+                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg> 화면 설정
+                </h3>
                 <button onclick="closeSettings()" class="text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 p-1.5 rounded-full"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
             </div>
             <div class="space-y-5 mb-6">
@@ -424,14 +432,12 @@
             const sProv = document.getElementById('setting-prov'); 
             const sCity = document.getElementById('setting-city');
             
-            // 최초 1회 도/광역시 옵션 채우기
             if (sProv.options.length === 0 && Object.keys(provCityMap).length > 0) { 
                 Object.keys(provCityMap).sort().forEach(p => { 
                     const opt = document.createElement('option'); opt.value = p; opt.textContent = p; sProv.appendChild(opt); 
                 }); 
             }
             
-            // 모달을 열 때마다 기존 저장된 지역 설정으로 안전하게 초기화
             sProv.value = defaultProv; 
             onSettingProvChange(); 
             sCity.value = defaultCity; 
@@ -469,7 +475,6 @@
             closeSettings(); showToast("설정이 저장되었습니다.");
         }
 
-        // 방식 변경 버튼 UI만 독립적으로 업데이트하는 함수 (드롭다운과 로직 분리)
         function updateSettingsButtonsUI() {
             const btnMap = document.getElementById('btn-view-map'); const btnDiagram = document.getElementById('btn-view-diagram');
             const activeClass = "flex-1 py-4 border-2 rounded-xl text-sm font-bold flex flex-col items-center gap-2 transition-colors border-blue-500 bg-blue-50 text-blue-700"; 
@@ -495,7 +500,7 @@
         
         function setTempViewMode(mode) { 
             tempViewMode = mode; 
-            updateSettingsButtonsUI(); // 드롭다운을 건드리지 않고 버튼 모양만 변경
+            updateSettingsButtonsUI(); 
         }
 
         // --- 지역 및 도시 코드 API 로직 ---
@@ -920,14 +925,20 @@
             document.getElementById('sidebar-view-detail').classList.remove('hidden');
             
             document.getElementById('sidebar-detail-title').textContent = nodenm; 
-            document.getElementById('stop-search-sort').value = currentArrivalSort; 
+            const sortElem = document.getElementById('stop-search-sort');
+            if (sortElem) sortElem.value = currentArrivalSort; 
             
             const listContainer = document.getElementById('stop-route-list'); 
-            listContainer.innerHTML = '<div class="text-sm text-center py-6 text-gray-500 font-medium animate-pulse">경유 노선 및 실시간 도착 정보를 불러오는 중...</div>';
+            if (listContainer) listContainer.innerHTML = '<div class="text-sm text-center py-6 text-gray-500 font-medium animate-pulse">경유 노선 및 실시간 도착 정보를 불러오는 중...</div>';
             
             setTimeout(() => map.invalidateSize(), 150); 
 
-            try { currentArrivalData = await fetchStopArrivalData(nodeid); renderStopSearchArrivals(currentArrivalSort); } catch (error) { listContainer.innerHTML = `<div class="text-sm text-center py-6 text-red-500 font-medium">데이터를 불러오지 못했습니다. 일시적인 장애일 수 있습니다.</div>`; }
+            try { 
+                currentArrivalData = await fetchStopArrivalData(nodeid); 
+                renderStopSearchArrivals(currentArrivalSort); 
+            } catch (error) { 
+                if (listContainer) listContainer.innerHTML = `<div class="text-sm text-center py-6 text-red-500 font-medium">데이터를 불러오지 못했습니다. 일시적인 장애일 수 있습니다.</div>`; 
+            }
         }
 
         // --- 도착 정보 및 알람 공통 ---
@@ -1039,17 +1050,23 @@
             return finalHtml || '<div class="text-sm text-center py-4 text-gray-500">도착 정보가 없습니다.</div>';
         }
 
-        function changeRouteFromPopup(routeid, routeno, routetp) { 
-            closeGeneralPopup(); 
-            startRouteTracking(routeid, routeno, routetp, true); 
+        function renderDiagramArrivals(sortType) { 
+            currentArrivalSort = sortType; 
+            const listElem = document.getElementById('diagram-stop-arrival-list');
+            if (listElem) listElem.innerHTML = generateArrivalListHtml(sortArrivalData(currentArrivalData, sortType), true); 
         }
-        function renderDiagramArrivals(sortType) { currentArrivalSort = sortType; document.getElementById('diagram-stop-arrival-list').innerHTML = generateArrivalListHtml(sortArrivalData(currentArrivalData, sortType), true); }
-        function renderStopSearchArrivals(sortType) { currentArrivalSort = sortType; document.getElementById('stop-route-list').innerHTML = generateArrivalListHtml(sortArrivalData(currentArrivalData, sortType), false); }
+        function renderStopSearchArrivals(sortType) { 
+            currentArrivalSort = sortType; 
+            const listElem = document.getElementById('stop-route-list');
+            if (listElem) listElem.innerHTML = generateArrivalListHtml(sortArrivalData(currentArrivalData, sortType), false); 
+        }
 
         function openAlarmSetupPopup(stopId, stopNm) {
             closeGeneralPopup(); const modal = document.getElementById('alarm-setup-modal'); document.getElementById('alarm-setup-stop-name').textContent = stopNm; const routeSelect = document.getElementById('alarm-route-select'); routeSelect.innerHTML = '';
             
-            // 도착 예정인 버스가 없어도 현재 띄워진 노선이면 무조건 알람 설정 가능하도록 추가
+            let alarmTypeText = myBusId ? '도착(하차)' : '승차';
+            document.getElementById('alarm-modal-title').textContent = `${alarmTypeText} 알림 설정`;
+            
             const addedRoutes = new Set();
             if (currentRouteId) {
                 const opt = document.createElement('option'); opt.value = currentRouteId; opt.dataset.routeno = currentRouteNo; opt.textContent = `${currentRouteNo}번 버스`; opt.selected = true; routeSelect.appendChild(opt);
@@ -1067,7 +1084,9 @@
             
             modal.dataset.stopid = stopId; modal.dataset.stopnm = stopNm; modal.classList.remove('hidden');
         }
+        
         function closeAlarmSetup() { document.getElementById('alarm-setup-modal').classList.add('hidden'); }
+        
         function saveBusAlarm() {
             const modal = document.getElementById('alarm-setup-modal'); const stopId = modal.dataset.stopid; const stopNm = modal.dataset.stopnm; const select = document.getElementById('alarm-route-select');
             if (select.options.length === 0 || !select.value) { showToast("알림을 설정할 버스가 없습니다."); return; }
@@ -1080,17 +1099,23 @@
                 targetNodeOrd = parseInt(currentRouteStops[stopIndex].nodeord) || -1;
             }
             
-            activeAlarm = { stopId, stopNm, routeId, routeNo, threshold, isTriggered: false, triggerStopIndex, targetNodeOrd };
-            if (alarmIntervalId) clearInterval(alarmIntervalId); alarmIntervalId = setInterval(checkActiveAlarm, 10000); 
-            closeAlarmSetup(); showToast(`${routeNo}번 버스 도착 알림이 설정되었습니다.`); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); renderMapMarkers(); applyBusLocationsToUI(currentBusLocations);
+            let alarmTypeText = myBusId ? '도착(하차)' : '승차';
+            activeAlarm = { stopId, stopNm, routeId, routeNo, threshold, isTriggered: false, triggerStopIndex, targetNodeOrd, alarmType: alarmTypeText };
             
-            checkActiveAlarm(); // 설정 즉시 1회 체크
+            if (alarmIntervalId) clearInterval(alarmIntervalId); alarmIntervalId = setInterval(checkActiveAlarm, 10000); 
+            closeAlarmSetup(); showToast(`${routeNo}번 버스 ${alarmTypeText} 알림이 설정되었습니다.`); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); renderMapMarkers(); applyBusLocationsToUI(currentBusLocations);
+            
+            checkActiveAlarm(); 
         }
-        function cancelBusAlarm() { if (alarmIntervalId) clearInterval(alarmIntervalId); activeAlarm = null; alarmIntervalId = null; showToast("도착 알림 설정이 해제되었습니다."); closeGeneralPopup(); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); renderMapMarkers(); applyBusLocationsToUI(currentBusLocations); }
+        
+        function cancelBusAlarm() { if (alarmIntervalId) clearInterval(alarmIntervalId); activeAlarm = null; alarmIntervalId = null; showToast("알림 설정이 해제되었습니다."); closeGeneralPopup(); renderDiagram(currentRouteStops, currentRouteNo, currentRouteTp); renderMapMarkers(); applyBusLocationsToUI(currentBusLocations); }
+        
         async function checkActiveAlarm() {
             if (!activeAlarm || activeAlarm.isTriggered) return;
             
-            // 1. 실시간 위치 API 기반 검증 (지금 여기 - 도착/통과를 가장 정확히 잡음)
+            const titleElem = document.getElementById('alarm-fire-title');
+            if (titleElem) titleElem.textContent = `버스 ${activeAlarm.alarmType} 알림!`;
+
             if (currentRouteId === activeAlarm.routeId && currentBusLocations.length > 0 && activeAlarm.targetNodeOrd !== -1) {
                 const targetOrd = activeAlarm.targetNodeOrd;
                 const threshold = activeAlarm.threshold;
@@ -1098,7 +1123,6 @@
                 const triggeredBus = currentBusLocations.find(bus => {
                     if (!bus.nodeord) return false;
                     const diff = targetOrd - bus.nodeord;
-                    // 알람 기준선 안으로 들어왔거나, 정류장을 막 지나친 직후(-2)까지만 잡아냄
                     return diff <= threshold && diff >= -2;
                 });
 
@@ -1106,13 +1130,14 @@
                     activeAlarm.isTriggered = true; clearInterval(alarmIntervalId); alarmIntervalId = null;
                     const diff = targetOrd - triggeredBus.nodeord;
                     let msgStr = diff <= 0 ? '도착 및 통과' : `${diff}정거장 전`;
-                    document.getElementById('alarm-fire-msg').innerHTML = `<span class="text-blue-600 font-black text-xl">${activeAlarm.routeNo}번</span> 버스가<br><strong class="text-gray-800 text-lg">${activeAlarm.stopNm}</strong>에<br><span class="text-red-600 font-black text-xl">${msgStr}</span> 입니다!`; 
-                    document.getElementById('alarm-fire-modal').classList.remove('hidden');
+                    const msgElem = document.getElementById('alarm-fire-msg');
+                    if (msgElem) msgElem.innerHTML = `<span class="text-blue-600 font-black text-xl">${activeAlarm.routeNo}번</span> 버스가<br><strong class="text-gray-800 text-lg">${activeAlarm.stopNm}</strong>에<br><span class="text-red-600 font-black text-xl">${msgStr}</span> 입니다!`; 
+                    const modalElem = document.getElementById('alarm-fire-modal');
+                    if (modalElem) modalElem.classList.remove('hidden');
                     return;
                 }
             }
 
-            // 2. 도착 예정 정보 API 기반 폴백 검증
             try {
                 const data = await safeFetchJson(`${API_CONFIG.baseUrlStop}/getSttnAcctoArvlPrearngeInfoList?serviceKey=${API_CONFIG.serviceKey}&cityCode=${API_CONFIG.cityCode}&nodeId=${activeAlarm.stopId}&numOfRows=100&pageNo=1&_type=json`); 
                 const items = data?.response?.body?.items?.item; if (!items) return;
@@ -1124,8 +1149,10 @@
                         if (cnt <= activeAlarm.threshold) {
                             activeAlarm.isTriggered = true; clearInterval(alarmIntervalId); alarmIntervalId = null;
                             let msgStr = cnt === 0 ? '도착 및 통과' : `${cnt}정거장 전`;
-                            document.getElementById('alarm-fire-msg').innerHTML = `<span class="text-blue-600 font-black text-xl">${activeAlarm.routeNo}번</span> 버스가<br><strong class="text-gray-800 text-lg">${activeAlarm.stopNm}</strong>에<br><span class="text-red-600 font-black text-xl">${msgStr}</span> 입니다!`; 
-                            document.getElementById('alarm-fire-modal').classList.remove('hidden');
+                            const msgElem = document.getElementById('alarm-fire-msg');
+                            if (msgElem) msgElem.innerHTML = `<span class="text-blue-600 font-black text-xl">${activeAlarm.routeNo}번</span> 버스가<br><strong class="text-gray-800 text-lg">${activeAlarm.stopNm}</strong>에<br><span class="text-red-600 font-black text-xl">${msgStr}</span> 입니다!`; 
+                            const modalElem = document.getElementById('alarm-fire-modal');
+                            if (modalElem) modalElem.classList.remove('hidden');
                             return;
                         }
                     }
@@ -1145,14 +1172,30 @@
         async function openDiagramStopPopup(globalIndex, specialText) {
             if (checkSelectionState()) return; const stop = currentRouteStops[globalIndex];
             currentStopNameForArrival = stop.nodenm; 
+            
             let depClass = targetDepIndex === globalIndex ? 'bg-blue-600 text-white shadow-lg scale-105' : 'bg-gray-100 hover:bg-blue-50 text-gray-700'; let arrClass = targetArrIndex === globalIndex ? 'bg-red-600 text-white shadow-lg scale-105' : 'bg-gray-100 hover:bg-red-50 text-gray-700';
             let scheduleBtn = (specialText === '기점' || specialText === '회차' || specialText === '종점') ? `<button onclick="openSchedulePopup('${specialText}')" class="w-full mt-3 bg-gray-800 text-white font-bold py-3 rounded-xl hover:bg-gray-900 transition-colors shadow-md flex items-center justify-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ${specialText} 운행 시간표 보기</button>` : '';
-            let alarmAreaHtml = activeAlarm && (globalIndex === activeAlarm.triggerStopIndex || stop.nodeid === activeAlarm.stopId) ? `<div class="flex gap-2 mt-3"><button onclick="cancelBusAlarm()" class="w-full py-3 bg-red-100 hover:bg-red-200 text-red-800 rounded-xl font-bold flex items-center justify-center gap-1.5 shadow-sm border border-red-300"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><line x1="2" y1="2" x2="22" y2="22"></line><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> 알림 설정 해제</button></div>` : `<div class="flex gap-2 mt-3"><button onclick="openAlarmSetupPopup('${stop.nodeid}', '${stop.nodenm}')" class="w-full py-3 bg-yellow-100 hover:bg-yellow-200 text-yellow-800 rounded-xl font-bold flex items-center justify-center gap-1.5 shadow-sm border border-yellow-300"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> 도착 알림 설정</button></div>`;
+            
+            let alarmTypeText = myBusId ? '도착(하차)' : '승차';
+            let alarmAreaHtml = activeAlarm && (globalIndex === activeAlarm.triggerStopIndex || stop.nodeid === activeAlarm.stopId) ? `<div class="flex gap-2 mt-3"><button onclick="cancelBusAlarm()" class="w-full py-3 bg-red-100 hover:bg-red-200 text-red-800 rounded-xl font-bold flex items-center justify-center gap-1.5 shadow-sm border border-red-300"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><line x1="2" y1="2" x2="22" y2="22"></line><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> ${alarmTypeText} 알림 해제</button></div>` : `<div class="flex gap-2 mt-3"><button onclick="openAlarmSetupPopup('${stop.nodeid}', '${stop.nodenm}')" class="w-full py-3 bg-yellow-100 hover:bg-yellow-200 text-yellow-800 rounded-xl font-bold flex items-center justify-center gap-1.5 shadow-sm border border-yellow-300"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> ${alarmTypeText} 알림 설정</button></div>`;
 
             document.getElementById('diagram-general-modal-content').innerHTML = `<div class="text-center p-2 pt-2"><h3 class="text-2xl font-black text-gray-800 mb-1 leading-tight">${stop.nodenm}</h3><p class="text-xs font-bold text-gray-400 mb-4 bg-gray-100 inline-block px-2 py-0.5 rounded-full">정류소 순번: ${stop.nodeord}</p><div class="flex gap-2"><button onclick="setAsDeparture(${globalIndex})" class="flex-1 py-3 rounded-xl font-bold transition-all ${depClass}">출발지 지정</button><button onclick="setAsArrival(${globalIndex})" class="flex-1 py-3 rounded-xl font-bold transition-all ${arrClass}">도착지 지정</button></div>${(targetDepIndex === globalIndex || targetArrIndex === globalIndex) ? `<button onclick="clearStopSelection(${globalIndex})" class="mt-2 w-full py-2 text-sm text-gray-400 underline hover:text-gray-700 transition-colors">지정 해제</button>` : ''}${scheduleBtn} ${alarmAreaHtml}<div class="mt-4 border-t border-gray-100 pt-3 text-left"><div class="flex justify-between items-end mb-2"><h4 class="text-sm font-bold text-gray-800 flex items-center gap-1.5"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-500"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 도착 정보</h4><select id="diagram-arrival-sort" onchange="renderDiagramArrivals(this.value)" class="text-[11px] border border-gray-300 rounded p-1 bg-white outline-none cursor-pointer hover:border-blue-400"><option value="time">도착시간 순</option><option value="name">노선번호 순</option></select></div><div id="diagram-stop-arrival-list" class="flex flex-col max-h-[180px] overflow-y-auto custom-scrollbar pr-1"><div class="text-[11px] text-center text-gray-400 py-6 animate-pulse">불러오는 중...</div></div></div></div>`;
             document.getElementById('diagram-general-modal').classList.remove('hidden');
 
-            try { currentArrivalData = await fetchStopArrivalData(stop.nodeid); renderDiagramArrivals(currentArrivalSort); document.getElementById('diagram-arrival-sort').value = currentArrivalSort; } catch (e) { document.getElementById('diagram-stop-arrival-list').innerHTML = `<div class="text-[11px] text-center py-6 text-red-500">데이터 오류</div>`; }
+            try { 
+                currentArrivalData = await fetchStopArrivalData(stop.nodeid); 
+                renderDiagramArrivals(currentArrivalSort); 
+                const sortElem = document.getElementById('diagram-arrival-sort');
+                if (sortElem) sortElem.value = currentArrivalSort; 
+            } catch (e) { 
+                const listElem = document.getElementById('diagram-stop-arrival-list');
+                if (listElem) listElem.innerHTML = `<div class="text-[11px] text-center py-6 text-red-500">데이터 오류</div>`; 
+            }
+        }
+
+        function changeRouteFromPopup(routeid, routeno, routetp) { 
+            closeGeneralPopup(); 
+            startRouteTracking(routeid, routeno, routetp, true); 
         }
 
         function setAsDeparture(index) {
@@ -1299,7 +1342,7 @@
                     let lineDownHtml = drawVerticalDown ? `<div class="absolute top-1/2 left-1/2 w-1.5 h-32 ${cOut.bg} -translate-x-1/2"></div>` : '';
                     let arrowSvg = ''; if (!isLastInRoute) arrowSvg = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="${drawVerticalDown?'4,8 12,19 20,8':(isEvenRow?'8,4 19,12 8,20':'16,4 5,12 16,20')}"></polygon></svg>`;
 
-                    // 출발, 도착, 알림 배지를 아이콘보다 조금 더 큰 동그란 원형으로 만들고 이름의 반대쪽에 위치시킴
+                    // 1. 배지 (텍스트): 둥근 원형 디자인 유지
                     let badges = [];
                     if (globalIndex === targetDepIndex) badges.push(`<div class="w-10 h-10 bg-blue-600 border-[3px] border-white text-white text-[12px] font-black rounded-full shadow-lg flex items-center justify-center shrink-0 animate-bounce">출발</div>`);
                     else if (globalIndex === targetArrIndex) badges.push(`<div class="w-10 h-10 bg-red-600 border-[3px] border-white text-white text-[12px] font-black rounded-full shadow-lg flex items-center justify-center shrink-0 animate-bounce">도착</div>`);
@@ -1307,14 +1350,27 @@
 
                     let badgeHtml = '';
                     if (badges.length > 0) {
-                        // 정류장 이름이 위(isEvenRow)면 배지는 아래에, 이름이 아래(!isEvenRow)면 배지는 위에 배치
-                        const positionClass = isEvenRow ? 'top-[calc(50%+12px)]' : 'bottom-[calc(50%+12px)]';
-                        badgeHtml = `<div class="absolute ${positionClass} left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">${badges.join('')}</div>`;
+                        // 정류장 아이콘 위치와 정확히 일치하도록 정중앙(top-1/2, left-1/2)에 덮어서 배치
+                        badgeHtml = `<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1 z-40 pointer-events-none">${badges.join('')}</div>`;
+                    }
+
+                    // 2. 정류소 자체를 감싸는 하이라이트 원(Ring) 추가
+                    let nodeHighlight = '';
+                    let hlSize = isSpecialNode ? 'w-[52px] h-[52px]' : 'w-[40px] h-[40px]';
+                    let alarmHlSize = isSpecialNode ? 'w-[64px] h-[64px]' : 'w-[52px] h-[52px]';
+                    
+                    if (globalIndex === targetDepIndex) {
+                        nodeHighlight += `<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${hlSize} bg-blue-100 opacity-50 rounded-full z-[5] animate-ping"></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${hlSize} border-[4px] border-blue-600 rounded-full z-[5] shadow-lg pointer-events-none"></div>`;
+                    } else if (globalIndex === targetArrIndex) {
+                        nodeHighlight += `<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${hlSize} bg-red-100 opacity-50 rounded-full z-[5] animate-ping"></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${hlSize} border-[4px] border-red-600 rounded-full z-[5] shadow-lg pointer-events-none"></div>`;
+                    }
+                    if (activeAlarm && globalIndex === activeAlarm.triggerStopIndex) {
+                        nodeHighlight += `<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${alarmHlSize} bg-yellow-200 opacity-50 rounded-full z-[4] animate-ping"></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${alarmHlSize} border-[4px] border-yellow-400 rounded-full z-[4] shadow-lg pointer-events-none"></div>`;
                     }
 
                     let nodeHtml = isSpecialNode ? `<div onclick="onDiagramStopClick(${globalIndex}, event, '${specialText}')" class="relative w-10 h-10 bg-gray-500 border-[3px] border-gray-200 rounded-full z-20 shadow-md flex flex-col items-center justify-center text-white tracking-tighter break-keep leading-none cursor-pointer hover:scale-125 transition-transform"><span class="text-[11px] font-black pointer-events-none">${specialText}</span>${!isLastInRoute ? `<div class="mt-0.5 pointer-events-none">${arrowSvg}</div>` : ''}</div>` : `<div onclick="onDiagramStopClick(${globalIndex}, event, '')" class="relative w-6 h-6 bg-white border-[3px] ${cOut.border} rounded-full z-10 flex items-center justify-center ${cOut.text} cursor-pointer hover:scale-125 transition-transform"><span class="pointer-events-none">${!isLastInRoute ? arrowSvg : ''}</span></div>`;
 
-                    html += `<div class="relative flex flex-col items-center justify-center shrink-0" style="width: ${nodeWidth}px;"><div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">${lineLeftHtml}${lineRightHtml}${lineDownHtml}</div><div class="absolute top-0 h-10 flex items-end justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${isEvenRow ? stop.nodenm : ''}</span></div>${nodeHtml}${badgeHtml}<div class="absolute bottom-0 h-10 flex items-start justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${!isEvenRow ? stop.nodenm : ''}</span></div><div id="diagram-bus-slot-${globalIndex}" class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-2 z-30 flex flex-col items-center justify-end w-32 h-32 pointer-events-none"></div></div>`;
+                    html += `<div class="relative flex flex-col items-center justify-center shrink-0" style="width: ${nodeWidth}px;"><div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">${lineLeftHtml}${lineRightHtml}${lineDownHtml}</div><div class="absolute top-0 h-10 flex items-end justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${isEvenRow ? stop.nodenm : ''}</span></div>${nodeHighlight}${nodeHtml}${badgeHtml}<div class="absolute bottom-0 h-10 flex items-start justify-center w-full px-1 z-10 pointer-events-none"><span class="text-[11px] font-bold ${globalIndex === targetDepIndex || globalIndex === targetArrIndex ? 'text-blue-600 scale-110' : 'text-gray-700'} text-center leading-tight break-keep transition-all">${!isEvenRow ? stop.nodenm : ''}</span></div><div id="diagram-bus-slot-${globalIndex}" class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-2 z-30 flex flex-col items-center justify-end w-32 h-32 pointer-events-none"></div></div>`;
                 }); html += `</div>`; 
             }); document.getElementById('diagram-container').innerHTML = html + `</div>`;
         }
